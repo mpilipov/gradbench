@@ -1,6 +1,6 @@
 use std::{
     fs,
-    io::{self, BufRead, Write},
+    io::{self, BufRead, Write, Read},
     process::{Child, ChildStdout},
     sync::{Arc, Mutex},
     time::{Duration, Instant},
@@ -52,6 +52,22 @@ impl Line {
         writeln!(o)?;
         self.id = None;
         Ok(())
+    }
+}
+
+
+struct LoggingReader<R: Read> {
+    inner: R,
+}
+
+impl<R: Read> Read for LoggingReader<R> {
+    fn read(&mut self, buf: &mut [u8]) -> io::Result<usize> {
+        let n = self.inner.read(buf)?;
+        if n > 0 {
+            // !!!
+            //eprintln!("[LOG tool stdout] {}", String::from_utf8_lossy(&buf[..n]));
+        }
+        Ok(n)
     }
 }
 
@@ -162,13 +178,15 @@ impl<
         let mut invalid = 0;
         let mut line = Line::new();
         while let Some(eval_line) = try_read_line(&mut self.eval_out)? {
+            // !!! for printing eval->tool messages
+            //eprintln!("{}", format!("EVAL -> TOOL: {}", eval_line.trim()).blue());
             let message_time = (self.clock)();
-            writeln!(
-                self.log,
-                r#"{{ "elapsed": {{ "nanoseconds": {} }}, "message": {} }}"#,
-                message_time.as_nanos(),
-                eval_line.trim(),
-            )?;
+            // writeln!(
+            //     self.log,
+            //     r#"{{ "elapsed": {{ "nanoseconds": {} }}, "message": {} }}"#,
+            //     message_time.as_nanos(),
+            //     eval_line.trim(),
+            // )?;
             let message: Message = self.parse_message(&eval_line)?;
             match &message {
                 Message::Start { .. } => {
@@ -221,7 +239,12 @@ impl<
             self.tool_in.flush()?;
             let mut tool_line = String::new();
             match self.tool_out.read_line(&mut tool_line) {
-                Ok(_) => {}
+                Ok(_) => {
+                    // !!! for printing tool->eval messages
+                    //eprintln!("{}", format!("TOOL -> EVAL: {}", tool_line.trim()).yellow());
+                }
+
+
                 Err(err) => {
                     if err.kind() == io::ErrorKind::TimedOut {
                         let timeout_time = (self.clock)();
@@ -373,19 +396,20 @@ fn timeout_reader(reader: ChildStdout, timeout: Option<Duration>) -> impl io::Re
     }
     #[cfg(windows)]
     {
-        reader
+        LoggingReader { inner: reader }
     }
 }
 
 /// Run an eval and a tool together, returning the outcome.
 fn run_helper(
     ctrl_c: &mut CtrlC,
-    log: impl Write,
+    mut log: impl Write,
     eval: &mut Child,
     tool: &mut Child,
     timeout: Option<Duration>,
 ) -> Result<(), BadOutcome> {
     let outcome_mutex = Arc::new(Mutex::new(None));
+
     let ctrl_c_handler = match handle_ctrlc(ctrl_c, eval, tool, Arc::clone(&outcome_mutex)) {
         Ok(handler) => handler,
         Err(err) => {

@@ -22,7 +22,7 @@ endif
 all: $(addprefix bin/, $(EXECUTABLES))
 
 bin/%: %.cpp $(EXTRA_DEPS)
-	@mkdir -p bin
+	@mkdir -p bin || true
 	$(CXX) -o $@ $^ $(LDFLAGS) $(CXXFLAGS)
 
 clean:

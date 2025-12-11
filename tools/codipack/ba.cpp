@@ -1,3 +1,6 @@
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 #include "gradbench/evals/ba.hpp"
 #include "codi_impl.hpp"
 #include "gradbench/main.hpp"
