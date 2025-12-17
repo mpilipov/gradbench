@@ -1,4 +1,4 @@
-EXECUTABLES=hello
+EXECUTABLES=hello gmm
 
 # Connecting the common makefile
 include ../../cpp/common.mk
@@ -16,3 +16,8 @@ override LDLIBS += -lxad
 bin/hello: hello.cpp
 	mkdir -p bin
 	$(CXX) $(CXXFLAGS) -o $@ hello.cpp $(LDFLAGS) $(LDLIBS)
+
+# !!! НОВОЕ ПРАВИЛО ДЛЯ gmm !!!
+bin/gmm: gmm.cpp
+	mkdir -p bin
+	$(CXX) $(CXXFLAGS) -o $@ gmm.cpp $(LDFLAGS) $(LDLIBS)
