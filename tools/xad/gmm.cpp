@@ -12,7 +12,7 @@ public:
   GmmXAD(Input& input) : Function(input) {}
 
   void compute(JacOutput& output) {
-
+    // types initialization
     typedef xad::adj<double>  mode;
     typedef mode::tape_type   tape_type;
     typedef mode::active_type AD;

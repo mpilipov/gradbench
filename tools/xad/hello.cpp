@@ -5,13 +5,17 @@
 #include <XAD/XAD.hpp>
 using namespace xad;
 using namespace hello;
-template <typename T>
-T double_x(T x) {
-  return x * 2.0;
-}
-class HelloSquareXAD : public Function<hello::Input, hello::DoubleOutput> {
-public:
-  HelloSquareXAD(hello::Input& input) : Function(input) {}
+// template <typename T>
+// T square_x(T x) {
+//   return x * 2.0;
+// }
+
+// calculates the function value
+class HelloFunctionXAD
+    : public Function<hello::Input,
+                      hello::DoubleOutput> {  // DoubleOutput is hello.hpp type
+public:                                       // constructor init
+  HelloFunctionXAD(hello::Input& input) : Function(input) {}
 
   void compute(hello::DoubleOutput& output) {
     // Defining types
@@ -30,17 +34,17 @@ public:
     // tape input
     tape.registerInput(x);
     tape.newRecording();
-    AD y =
-        hello::square(x);  // the comupted function itself (also hello:square)
-
-    // output is function y=x^2 value
+    AD y = hello::square(
+        x);  // set the comupted function itself (part of hello.hpp)
+    // we don't call computeAdjoints() function here
+    // output is a value of function y=x^2 (hello::square(x))
     output = y.value();
   }
 };
-
-class HelloDoubleXAD : public Function<hello::Input, hello::DoubleOutput> {
-public:
-  HelloDoubleXAD(hello::Input& input) : Function(input) {}
+// calculates derivative of the function
+class HelloDerivativeXAD : public Function<hello::Input, hello::DoubleOutput> {
+public:  // constructor init
+  HelloDerivativeXAD(hello::Input& input) : Function(input) {}
 
   void compute(hello::DoubleOutput& output) {
     // Defining types
@@ -60,16 +64,20 @@ public:
     tape.registerInput(x);
 
     tape.newRecording();
+    // set the comupted function itself (also hello::square)
+    AD y = hello::square(x);
+    tape.registerOutput(y);
+    derivative(y) = 1.0;
+    // call computeAdjoints() to calculate the derivative
+    tape.computeAdjoints();
 
-    AD y = double_x(x);  // the comupted function itself (also hello:square)
-
-    // output is function y=2*x value
-    output = y.value();
+    // output is a derivative of function y=x^2
+    output = xad::derivative(x);
   }
 };
 
 int main(int argc, char* argv[]) {
   return generic_main(argc, argv,
-                      {{"square", function_main<HelloSquareXAD>},
-                       {"double", function_main<HelloDoubleXAD>}});
+                      {{"square", function_main<HelloFunctionXAD>},
+                       {"double", function_main<HelloDerivativeXAD>}});
 }
