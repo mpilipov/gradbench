@@ -1,34 +1,9 @@
 import re
 import matplotlib.pyplot as plt
-
-# log_data = """
-#  [0] start gmm (xad)
-#  [1] def   gmm                                 21.646 s ✓
-#  [2] eval  gmm::objective  2_5_1000            1.491 s ~         0ms prepare,         0ms evaluate × 7552 ✓
-#  [4] eval  gmm::jacobian   2_5_1000            1.178 s ~         0ms prepare,         0ms evaluate × 183 ✓
-#  [6] eval  gmm::objective  2_10_1000           1.217 s ~         0ms prepare,         0ms evaluate × 3536 ✓
-#  [8] eval  gmm::jacobian   2_10_1000           1.116 s ~         0ms prepare,        10ms evaluate × 94 ✓
-# [84] eval  gmm::jacobian   64_25_1000        7:12.325   ~         0ms prepare,  6:40.404   evaluate ✓
-# [96] eval  gmm::jacobian   64_50_1000         10.831 s ✗
-# """
+import numpy as np
 log_data = ""
-filename="gradbench_results/gmm_adept_launch.txt"
-try:
-    with open(filename, 'r', encoding='utf-16') as f:
-        log_data = f.read()
-except UnicodeError:
-    print("can't read as utf-16, try to read as UTF-8...")
-    try:
-        with open(filename, 'r', encoding='utf-8') as f:
-            log_data = f.read()
-    except UnicodeDecodeError:
-        print("Encoding error")
-        exit()
-except FileNotFoundError:
-    print(f"File {filename} is not found")
-    exit()
-
-
+filename1="gradbench_results/gmm_adept_launch.txt"
+filename2="gradbench_results/gmm_xad_launch.txt"
 
 def parse_time_to_seconds(time_str):
     if ':' in time_str:
@@ -41,67 +16,135 @@ def parse_time_to_seconds(time_str):
         # seconds
         return float(time_str)
 
-def parse_log(data):
-    test_names = []
-    execution_times = []
-
-    # reg expression
+def parse_file(filename):
+    data_dict = {}
     # 1. index [N]
     # 2. type (def or eval)
     # 3. test name
     # 4. time (can be a number or mm:ss.ms)
-    regex_pattern = r'\[\s*\d+\]\s+(?:def|eval)\s+(.+?)\s+((?:\d+:)?\d+\.\d+)'
+    regex_pattern = r'(\[\s*\d+\])\s+eval\s+(.+?)\s+((?:\d+:)?\d+\.\d+)'
 
-    lines = data.strip().split('\n')
+    try:
+        with open(filename, 'r', encoding='utf-16') as f:
+            content = f.read()
+    except (UnicodeError, FileNotFoundError):
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except FileNotFoundError:
+            print(f"Error: the file {filename} is not found")
+            return {}
 
-    for line in lines:
+    for line in content.split('\n'):
         match = re.search(regex_pattern, line)
         if match:
-            name_raw = match.group(1).strip()
-            time_raw = match.group(2).strip()
+            # taking index of group 1 and name from group 2
+            test_index = match.group(1).strip()
+            test_body = match.group(2).strip()
 
-            # remove extra spaces
-            name_clean = " ".join(name_raw.split())
+            # concatenating the index and the body
+            test_name = f"{test_index} {test_body}"
 
+            # removing spaces
+            #test_name = " ".join(test_name.split())
+
+            time_str = match.group(3).strip() # time is on the 3rd group
             try:
-                seconds = parse_time_to_seconds(time_raw)
-
-                test_names.append(name_clean)
-                execution_times.append(seconds)
+                seconds = parse_time_to_seconds(time_str)
+                data_dict[test_name] = seconds
             except ValueError:
                 continue
+    return data_dict
 
-    return test_names, execution_times
-
-def plot_chart(names, times):
-    if not names:
-        print("No data found")
+def plot_comparison(data_tool2, data_tool1):
+    # 1. Find common tests for both libraries implementations for the task
+    common_tests = sorted(list(set(data_tool2.keys()) & set(data_tool1.keys())))
+    if not common_tests:
+        print("There are no common tests")
         return
 
-    plt.figure(figsize=(14, 8))
+    # Filtration (only Jacobian) ???
+    jacobian_tests = [t for t in common_tests if 'jacobian' in t]
+    tests_to_plot = jacobian_tests if jacobian_tests else common_tests
 
-    # create bar chart
-    bars = plt.bar(names, times, color='skyblue', edgecolor='navy')
+    # 2. Split data on two parts
+    left_side = []  # (name, abs_diff) - XAD is faster than Adept
+    right_side = [] # (name, abs_diff) - Adept is faster than XAD
 
-    plt.ylabel('Execution time (s)', fontsize=12)
-    plt.title('Tests performance', fontsize=16)
+    for t in tests_to_plot:
+        t_tool2 = data_tool2[t]
+        t_tool1 = data_tool1[t]
 
-    # rotating axis X labels
-    plt.xticks(rotation=45, ha='right', fontsize=8)
+        diff = t_tool2 - t_tool1
 
-    # Add axis Y grid
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
+        #clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj').strip()
+        clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj')
+        clean_name = " ".join(clean_name.split()) # Убираем лишние пробелы
+        #print(t)
+        if diff < 0:
+            # XAD is faster Adept
+            left_side.append((clean_name, abs(diff)))
+            print("l=", diff, " ", clean_name)
+        else:
+            # XAD is slower than Adept
+            right_side.append((clean_name, abs(diff)))
+            print("r=", diff, " ", clean_name)
 
-    # test labels above the columns
-    for bar in bars:
-        height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2., height,
-                 f'{height:.2f}',
-                 ha='center', va='bottom', fontsize=8, rotation=90)
+    # 3. Sorting
+    # left side - to sort in ascending
+    left_side.sort(key=lambda x: x[1])
 
-    # make indents
+    # right side - to sort in descending
+    right_side.sort(key=lambda x: x[1], reverse=True)
+
+    # 4. Coordinates preparation
+    x_left = np.arange(-len(left_side), 0)
+    y_left = [item[1] for item in left_side]
+    labels_left = [item[0] for item in left_side]
+
+    x_right = np.arange(0, len(right_side))
+    y_right = [item[1] for item in right_side]
+    labels_right = [item[0] for item in right_side]
+
+    # 5. Plot the graph
+    plt.figure(figsize=(16, 9))
+
+
+    bars_left = plt.bar(x_left + 0.5, y_left, width=0.8, color='#2ca02c', edgecolor='black', alpha=0.8, label='XAD Быстрее')
+
+    bars_right = plt.bar(x_right + 0.5, y_right, width=0.8, color='#d62728', edgecolor='black', alpha=0.8, label='Adept Быстрее')
+
+    # Axis Y
+    plt.axvline(0, color='black', linewidth=2, linestyle='-')
+
+    # Vertical label
+    plt.ylabel('Time difference (seconds)', fontsize=12)
+
+    # Labels for bars on X axis
+    all_x = np.concatenate([x_left + 0.5, x_right + 0.5])
+    all_labels = labels_left + labels_right
+    plt.xticks(all_x, all_labels, rotation=45, ha='right', fontsize=9)
+
+    plt.grid(axis='y', linestyle='--', alpha=0.5)
+
+    # Bar values labels
+    def annotate_bars(bars):
+        for bar in bars:
+            height = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width()/2, height+0.1,
+                     f'{height:.2f}',
+                     ha='center', va='bottom', fontsize=8, rotation=90)
+
+    annotate_bars(bars_left)
+    annotate_bars(bars_right)
     plt.tight_layout()
     plt.show()
 
-names, times = parse_log(log_data)
-plot_chart(names, times)
+print(f"Reading XAD from {filename2}...")
+data_tool2 = parse_file(filename2)
+
+print(f"Reading Adept from {filename1}...")
+data_tool1 = parse_file(filename1)
+
+print(f"Tests found: XAD={len(data_tool2)}, Adept={len(data_tool1)}")
+plot_comparison(data_tool2, data_tool1)
