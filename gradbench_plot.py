@@ -96,13 +96,13 @@ def plot_comparison(data_tool2, data_tool1):
     plt.title('Distribution of time differences of the performances', fontsize=14)
 
     plt.grid(axis='y', linestyle='--', alpha=0.5)
+
+    # changing the labels of X-axis to make it (-2, -1, 0, 1, 2, 3...)
     min_val = np.floor(min(differences))
     max_val = np.ceil(max(differences))
-    # 2. Создаем массив чисел от min до max с шагом 1
-    # np.arange(start, stop, step)
-    # Добавляем +1 к max_val, чтобы правая граница тоже вошла
+    # creating array of numbers from min to max+1 with step 1
     ticks = np.arange(min_val, max_val + 1, 1)
-    # 3. Применяем эти тики к графику
+    # apply this array to the histogram
     plt.xticks(ticks)
     plt.tight_layout()
     plt.show()
