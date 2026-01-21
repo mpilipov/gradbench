@@ -22,8 +22,8 @@ def parse_file(filename):
     # 2. type (def or eval)
     # 3. test name
     # 4. time (can be a number or mm:ss.ms)
-    regex_pattern = r'\[\s*\d+\]\s+eval\s+(.+?)\s+((?:\d+:)?\d+\.\d+)'
-                    # убрать эту часть regexp
+    regex_pattern = r'(\[\s*\d+\])\s+eval\s+(.+?)\s+((?:\d+:)?\d+\.\d+)'
+
     try:
         with open(filename, 'r', encoding='utf-16') as f:
             content = f.read()
@@ -38,8 +38,17 @@ def parse_file(filename):
     for line in content.split('\n'):
         match = re.search(regex_pattern, line)
         if match:
-            test_name = " ".join(match.group(1).split())
-            time_str = match.group(2).strip()
+            # taking index of group 1 and name from group 2
+            test_index = match.group(1).strip()
+            test_body = match.group(2).strip()
+
+            # concatenating the index and the body
+            test_name = f"{test_index} {test_body}"
+
+            # removing spaces
+            #test_name = " ".join(test_name.split())
+
+            time_str = match.group(3).strip() # time is on the 3rd group
             try:
                 seconds = parse_time_to_seconds(time_str)
                 data_dict[test_name] = seconds
@@ -50,7 +59,6 @@ def parse_file(filename):
 def plot_comparison(xad_data, adept_data):
     # 1. Find common tests for both libraries implementations for the task
     common_tests = sorted(list(set(xad_data.keys()) & set(adept_data.keys())))
-    print(common_tests)
     if not common_tests:
         print("There are no common tests")
         return
@@ -68,7 +76,9 @@ def plot_comparison(xad_data, adept_data):
         t_adept = adept_data[t]
         diff = t_xad - t_adept
 
-        clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj').strip()
+        #clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj').strip()
+        clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj')
+        clean_name = " ".join(clean_name.split()) # Убираем лишние пробелы
         #print(t)
         if diff < 0:
             # XAD is faster Adept
@@ -84,15 +94,11 @@ def plot_comparison(xad_data, adept_data):
     # right side - to sort in descending
     right_side.sort(key=lambda x: x[1], reverse=True)
 
-    # 4. Подготовка координат для графика
-    # Левая сторона (отрицательные X): индексы -N, ..., -1
+    # 4. Coordinates preparation
     x_left = np.arange(-len(left_side), 0)
     y_left = [item[1] for item in left_side]
     labels_left = [item[0] for item in left_side]
-    #print(labels_left)
 
-    # Правая сторона (положительные X): индексы 0, ..., N-1
-    # Добавляем небольшой сдвиг (0.5), чтобы был зазор посередине
     x_right = np.arange(0, len(right_side))
     y_right = [item[1] for item in right_side]
     labels_right = [item[0] for item in right_side]
@@ -132,10 +138,10 @@ def plot_comparison(xad_data, adept_data):
     plt.show()
 
 print(f"Reading XAD from {filename2}...")
-data_xad = parse_file(filename2)
+data_tool2 = parse_file(filename2)
 
 print(f"Reading Adept from {filename1}...")
-data_adept = parse_file(filename1)
+data_tool1 = parse_file(filename1)
 
-print(f"Tests found: XAD={len(data_xad)}, Adept={len(data_adept)}")
-plot_comparison(data_xad, data_adept)
+print(f"Tests found: XAD={len(data_tool2)}, Adept={len(data_tool1)}")
+plot_comparison(data_tool2, data_tool1)
