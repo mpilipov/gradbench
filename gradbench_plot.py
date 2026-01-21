@@ -56,7 +56,7 @@ def parse_file(filename):
                 continue
     return data_dict
 
-def plot_comparison(xad_data, adept_data):
+def plot_comparison(data_tool2, data_tool1):
     # 1. Find common tests for both libraries implementations for the task
     common_tests = sorted(list(set(xad_data.keys()) & set(adept_data.keys())))
     if not common_tests:
@@ -72,9 +72,9 @@ def plot_comparison(xad_data, adept_data):
     right_side = [] # (name, abs_diff) - Adept is faster than XAD
 
     for t in tests_to_plot:
-        t_xad = xad_data[t]
-        t_adept = adept_data[t]
-        diff = t_xad - t_adept
+        t_tool2 = data_tool2[t]
+        t_tool1 = data_tool1[t]
+        diff = t_tool2 - t_tool1
 
         #clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj').strip()
         clean_name = t.replace('gmm::jacobian', '').replace('gmm::objective', 'Obj')
