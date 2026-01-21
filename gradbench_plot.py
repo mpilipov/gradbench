@@ -58,7 +58,7 @@ def parse_file(filename):
 
 def plot_comparison(data_tool2, data_tool1):
     # 1. Find common tests for both libraries implementations for the task
-    common_tests = sorted(list(set(xad_data.keys()) & set(adept_data.keys())))
+    common_tests = sorted(list(set(data_tool2.keys()) & set(data_tool1.keys())))
     if not common_tests:
         print("There are no common tests")
         return
