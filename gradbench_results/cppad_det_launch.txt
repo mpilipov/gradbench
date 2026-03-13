@@ -1,0 +1,16 @@
+[0] start det (cppad)
+  [1] def   det                                19.872 s ✓
+  [2] eval  det::primal     5                   4.067 s ~         0ms prepare,         0ms evaluate × 485888 ✓
+  [4] eval  det::gradient   5                   1.073 s ~         0ms prepare,         0ms evaluate × 15159 ✓
+  [6] eval  det::primal     6                   1.443 s ~         0ms prepare,         0ms evaluate × 72434 ✓
+  [8] eval  det::gradient   6                     991ms ~         0ms prepare,         0ms evaluate × 2983 ✓
+ [10] eval  det::primal     7                   1.018 s ~         0ms prepare,         0ms evaluate × 10913 ✓
+ [12] eval  det::gradient   7                     974ms ~         0ms prepare,         2ms evaluate × 380 ✓
+ [14] eval  det::primal     8                     979ms ~         0ms prepare,         0ms evaluate × 1496 ✓
+ [16] eval  det::gradient   8                     976ms ~         0ms prepare,        17ms evaluate × 56 ✓
+ [18] eval  det::primal     9                     972ms ~         0ms prepare,         5ms evaluate × 176 ✓
+ [20] eval  det::gradient   9                   1.086 s ~         0ms prepare,       160ms evaluate × 7 ✓
+ [22] eval  det::primal     10                    972ms ~         0ms prepare,        59ms evaluate × 17 ✓
+ [24] eval  det::gradient   10                  1.593 s ~         0ms prepare,     1.647 s evaluate ✓
+ [26] eval  det::primal     11                  1.228 s ~         0ms prepare,       634ms evaluate × 2 ✓
+ [28] eval  det::gradient   11               5:38.184   ~         0ms prepare,  5:50.122   evaluate ✓

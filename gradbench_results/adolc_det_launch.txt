@@ -1,0 +1,16 @@
+[0] start det (adol-c)
+  [1] def   det                                10.048 s ✓
+  [2] eval  det::primal     5                   6.825 s ~         0ms prepare,         0ms evaluate × 496242 ✓
+  [4] eval  det::gradient   5                   1.355 s ~         0ms prepare,         0ms evaluate × 58554 ✓
+  [6] eval  det::primal     6                   1.470 s ~         0ms prepare,         0ms evaluate × 86466 ✓
+  [8] eval  det::gradient   6                   1.058 s ~         0ms prepare,         0ms evaluate × 10760 ✓
+ [10] eval  det::primal     7                   1.059 s ~         0ms prepare,         0ms evaluate × 12823 ✓
+ [12] eval  det::gradient   7                   1.015 s ~         1ms prepare,         0ms evaluate × 1677 ✓
+ [14] eval  det::primal     8                   1.014 s ~         0ms prepare,         0ms evaluate × 1447 ✓
+ [16] eval  det::gradient   8                   1.030 s ~        18ms prepare,         6ms evaluate × 153 ✓
+ [18] eval  det::primal     9                   1.009 s ~         0ms prepare,         5ms evaluate × 181 ✓
+ [20] eval  det::gradient   9                   1.201 s ~       143ms prepare,        74ms evaluate × 14 ✓
+ [22] eval  det::primal     10                  1.051 s ~         0ms prepare,        58ms evaluate × 18 ✓
+ [24] eval  det::gradient   10                  2.965 s ~     1.413 s prepare,       746ms evaluate × 2 ✓
+ [26] eval  det::primal     11                  1.185 s ~         0ms prepare,       589ms evaluate × 2 ✓
+ [28] eval  det::gradient   11              12:48.933   ~  4:36.188   prepare,  8:09.369   evaluate ✓

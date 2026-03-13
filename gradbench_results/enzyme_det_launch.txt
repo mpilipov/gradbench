@@ -1,0 +1,16 @@
+[0] start det (enzyme)
+  [1] def   det                                13.126 s ✓
+  [2] eval  det::primal     5                   3.015 s ~         0ms prepare,         0ms evaluate × 493741 ✓
+  [4] eval  det::gradient   5                   1.089 s ~         0ms prepare,         0ms evaluate × 40909 ✓
+  [6] eval  det::primal     6                   1.389 s ~         0ms prepare,         0ms evaluate × 65824 ✓
+  [8] eval  det::gradient   6                     957ms ~         0ms prepare,         0ms evaluate × 5565 ✓
+ [10] eval  det::primal     7                     976ms ~         0ms prepare,         0ms evaluate × 11516 ✓
+ [12] eval  det::gradient   7                     939ms ~         0ms prepare,         1ms evaluate × 841 ✓
+ [14] eval  det::primal     8                     940ms ~         0ms prepare,         0ms evaluate × 1522 ✓
+ [16] eval  det::gradient   8                     963ms ~         0ms prepare,        11ms evaluate × 85 ✓
+ [18] eval  det::primal     9                     938ms ~         0ms prepare,         5ms evaluate × 173 ✓
+ [20] eval  det::gradient   9                   1.017 s ~         0ms prepare,       113ms evaluate × 9 ✓
+ [22] eval  det::primal     10                    977ms ~         0ms prepare,        57ms evaluate × 18 ✓
+ [24] eval  det::gradient   10                  5.547 s ~         0ms prepare,     5.379 s evaluate ✓
+ [26] eval  det::primal     11                  1.667 s ~         0ms prepare,       889ms evaluate × 2 ✓
+ [28] eval  det::gradient   11              17:25.612   ~         0ms prepare,  7:02.735   evaluate ✓

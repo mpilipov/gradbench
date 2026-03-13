@@ -1,0 +1,16 @@
+[0] start det (codipack)
+  [1] def   det                                18.241 s ✓
+  [2] eval  det::primal     5                   3.641 s ~         0ms prepare,         0ms evaluate × 336222 ✓
+  [4] eval  det::gradient   5                   1.682 s ~         0ms prepare,         0ms evaluate × 73020 ✓
+  [6] eval  det::primal     6                   1.222 s ~         0ms prepare,         0ms evaluate × 32653 ✓
+  [8] eval  det::gradient   6                   1.042 s ~         0ms prepare,         0ms evaluate × 13440 ✓
+ [10] eval  det::primal     7                   2.197 s ~         0ms prepare,         0ms evaluate × 12178 ✓
+ [12] eval  det::gradient   7                     990ms ~         0ms prepare,         0ms evaluate × 2300 ✓
+ [14] eval  det::primal     8                     994ms ~         0ms prepare,         0ms evaluate × 1383 ✓
+ [16] eval  det::gradient   8                     986ms ~         0ms prepare,         3ms evaluate × 294 ✓
+ [18] eval  det::primal     9                     988ms ~         0ms prepare,         5ms evaluate × 178 ✓
+ [20] eval  det::gradient   9                   1.019 s ~         0ms prepare,        32ms evaluate × 32 ✓
+ [22] eval  det::primal     10                    999ms ~         0ms prepare,        59ms evaluate × 17 ✓
+ [24] eval  det::gradient   10                  1.071 s ~         0ms prepare,       357ms evaluate × 3 ✓
+ [26] eval  det::primal     11                  1.214 s ~         0ms prepare,       619ms evaluate × 2 ✓
+ [28] eval  det::gradient   11               5:04.814   ~         0ms prepare,  5:13.256   evaluate ✓

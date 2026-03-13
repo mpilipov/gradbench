@@ -1,0 +1,15 @@
+ [0] start det (adept)
+  [1] def   det                                16.151 s ✓
+  [2] eval  det::primal     5                   3.702 s ~         0ms prepare,         0ms evaluate × 459492 ✓
+  [4] eval  det::gradient   5                   1.111 s ~         0ms prepare,         0ms evaluate × 17138 ✓
+  [6] eval  det::primal     6                   1.577 s ~         0ms prepare,         0ms evaluate × 47096 ✓
+  [8] eval  det::gradient   6                   1.035 s ~         0ms prepare,         0ms evaluate × 4007 ✓
+ [10] eval  det::primal     7                   1.074 s ~         0ms prepare,         0ms evaluate × 11812 ✓
+ [12] eval  det::gradient   7                   1.014 s ~         0ms prepare,         1ms evaluate × 878 ✓
+ [14] eval  det::primal     8                   1.017 s ~         0ms prepare,         0ms evaluate × 1633 ✓
+ [16] eval  det::gradient   8                   1.020 s ~         0ms prepare,         8ms evaluate × 118 ✓
+ [18] eval  det::primal     9                   1.009 s ~         0ms prepare,         5ms evaluate × 193 ✓
+ [20] eval  det::gradient   9                   1.013 s ~         0ms prepare,       101ms evaluate × 10 ✓
+ [22] eval  det::primal     10                  1.009 s ~         0ms prepare,        53ms evaluate × 19 ✓
+ [24] eval  det::gradient   10                  1.494 s ~         0ms prepare,     1.496 s evaluate ✓
+ [26] eval  det::primal     11                  1.495 s ~         0ms prepare,       743ms evaluate × 2 ✓

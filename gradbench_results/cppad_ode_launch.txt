@@ -1,0 +1,20 @@
+  [0] start ode (cppad)
+  [1] def   ode                                16.593 s ✓
+  [2] eval  ode::primal     n=1000,s=1          2.372 s ~         0ms prepare,         0ms evaluate × 258042 ✓
+  [4] eval  ode::gradient   n=1000,s=1            987ms ~         0ms prepare,         0ms evaluate × 2299 ✓
+  [6] eval  ode::primal     n=1000,s=10         1.132 s ~         0ms prepare,         0ms evaluate × 32817 ✓
+  [8] eval  ode::gradient   n=1000,s=10           978ms ~         0ms prepare,         3ms evaluate × 260 ✓
+ [10] eval  ode::primal     n=10000,s=1         1.052 s ~         0ms prepare,         0ms evaluate × 6272 ✓
+ [12] eval  ode::gradient   n=10000,s=1         1.021 s ~         0ms prepare,         4ms evaluate × 231 ✓
+ [14] eval  ode::primal     n=1000,s=100          986ms ~         0ms prepare,         0ms evaluate × 2633 ✓
+ [16] eval  ode::gradient   n=1000,s=100        1.034 s ~         0ms prepare,        81ms evaluate × 13 ✓
+ [18] eval  ode::primal     n=10000,s=10        1.047 s ~         0ms prepare,         0ms evaluate × 1661 ✓
+ [20] eval  ode::gradient   n=10000,s=10        1.035 s ~         0ms prepare,        30ms evaluate × 33 ✓
+ [22] eval  ode::primal     n=100000,s=1        1.449 s ~         0ms prepare,         1ms evaluate × 612 ✓
+ [24] eval  ode::gradient   n=100000,s=1        1.463 s ~         1ms prepare,        44ms evaluate × 23 ✓
+ [26] eval  ode::primal     n=10000,s=100       1.024 s ~         0ms prepare,         4ms evaluate × 205 ✓
+ [28] eval  ode::gradient   n=10000,s=100       1.125 s ~         0ms prepare,       367ms evaluate × 3 ✓
+ [30] eval  ode::primal     n=100000,s=10       1.482 s ~         0ms prepare,         7ms evaluate × 133 ✓
+ [32] eval  ode::gradient   n=100000,s=10       1.661 s ~         2ms prepare,       302ms evaluate × 4 ✓
+ [34] eval  ode::primal     n=100000,s=100      1.496 s ~         0ms prepare,        60ms evaluate × 17 ✓
+ [36] eval  ode::gradient   n=100000,s=100      3.407 s ~         2ms prepare,     3.014 s evaluate ✓

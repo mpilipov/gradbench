@@ -1,0 +1,20 @@
+ [0] start ode (adol-c)
+  [1] def   ode                                11.992 s ✓
+  [2] eval  ode::primal     n=1000,s=1          2.374 s ~         0ms prepare,         0ms evaluate × 227101 ✓
+  [4] eval  ode::gradient   n=1000,s=1          1.012 s ~         1ms prepare,         0ms evaluate × 1263 ✓
+  [6] eval  ode::primal     n=1000,s=10         1.163 s ~         0ms prepare,         0ms evaluate × 29729 ✓
+  [8] eval  ode::gradient   n=1000,s=10         1.058 s ~        61ms prepare,         4ms evaluate × 213 ✓
+ [10] eval  ode::primal     n=10000,s=1         1.069 s ~         0ms prepare,         0ms evaluate × 6389 ✓
+ [12] eval  ode::gradient   n=10000,s=1         1.088 s ~        51ms prepare,         6ms evaluate × 156 ✓
+ [14] eval  ode::primal     n=1000,s=100        1.006 s ~         0ms prepare,         0ms evaluate × 2462 ✓
+ [16] eval  ode::gradient   n=1000,s=100        2.180 s ~     1.138 s prepare,       106ms evaluate × 10 ✓
+ [18] eval  ode::primal     n=10000,s=10        1.065 s ~         0ms prepare,         0ms evaluate × 1537 ✓
+ [20] eval  ode::gradient   n=10000,s=10        1.287 s ~       190ms prepare,       102ms evaluate × 10 ✓
+ [22] eval  ode::primal     n=100000,s=1        1.506 s ~         0ms prepare,         2ms evaluate × 498 ✓
+ [24] eval  ode::gradient   n=100000,s=1        1.759 s ~       194ms prepare,       113ms evaluate × 9 ✓
+ [26] eval  ode::primal     n=10000,s=100       1.051 s ~         0ms prepare,         5ms evaluate × 197 ✓
+ [28] eval  ode::gradient   n=10000,s=100       4.573 s ~     3.228 s prepare,     1.265 s evaluate ✓
+ [30] eval  ode::primal     n=100000,s=10       1.576 s ~         0ms prepare,         8ms evaluate × 124 ✓
+ [32] eval  ode::gradient   n=100000,s=10       3.696 s ~     1.883 s prepare,     1.231 s evaluate ✓
+ [34] eval  ode::primal     n=100000,s=100      1.645 s ~         0ms prepare,        97ms evaluate × 11 ✓
+ [36] eval  ode::gradient   n=100000,s=100  17:17.449   ~  4:01.515   prepare, 12:55.906   evaluate ✓

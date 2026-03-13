@@ -1,0 +1,15 @@
+[0] start det (xad)
+  [1] def   det                              2:18.144   ✓
+  [2] eval  det::primal     5                   6.956 s ~         0ms prepare,         0ms evaluate × 516650 ✓
+  [4] eval  det::gradient   5                   1.037 s ~         0ms prepare,         0ms evaluate × 3140 ✓
+  [6] eval  det::primal     6                   1.625 s ~         0ms prepare,         0ms evaluate × 94759 ✓
+  [8] eval  det::gradient   6                   1.014 s ~         0ms prepare,         0ms evaluate × 2324 ✓
+ [10] eval  det::primal     7                   1.064 s ~         0ms prepare,         0ms evaluate × 14390 ✓
+ [12] eval  det::gradient   7                   1.015 s ~         0ms prepare,         2ms evaluate × 489 ✓
+ [14] eval  det::primal     8                   1.012 s ~         0ms prepare,         0ms evaluate × 1779 ✓
+ [16] eval  det::gradient   8                   1.019 s ~         0ms prepare,        15ms evaluate × 64 ✓
+ [18] eval  det::primal     9                   1.009 s ~         0ms prepare,         5ms evaluate × 192 ✓
+ [20] eval  det::gradient   9                   1.086 s ~         0ms prepare,       154ms evaluate × 7 ✓
+ [22] eval  det::primal     10                  1.031 s ~         0ms prepare,        50ms evaluate × 20 ✓
+ [24] eval  det::gradient   10                  2.433 s ~         0ms prepare,     2.429 s evaluate ✓
+ [26] eval  det::primal     11                  1.091 s ~         0ms prepare,       543ms evaluate × 2 ✓

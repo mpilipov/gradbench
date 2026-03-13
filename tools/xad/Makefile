@@ -1,4 +1,4 @@
-EXECUTABLES=hello gmm
+EXECUTABLES=hello gmm ode llsq det
 
 # Connecting the common makefile
 include ../../cpp/common.mk
@@ -17,7 +17,18 @@ bin/hello: hello.cpp
 	mkdir -p bin
 	$(CXX) $(CXXFLAGS) -o $@ hello.cpp $(LDFLAGS) $(LDLIBS)
 
-# !!! НОВОЕ ПРАВИЛО ДЛЯ gmm !!!
 bin/gmm: gmm.cpp
 	mkdir -p bin
 	$(CXX) $(CXXFLAGS) -o $@ gmm.cpp $(LDFLAGS) $(LDLIBS)
+
+bin/ode: ode.cpp
+	mkdir -p bin
+	$(CXX) $(CXXFLAGS) -o $@ ode.cpp $(LDFLAGS) $(LDLIBS)
+
+bin/llsq: llsq.cpp
+	mkdir -p bin
+	$(CXX) $(CXXFLAGS) -o $@ llsq.cpp $(LDFLAGS) $(LDLIBS)
+
+bin/det: det.cpp
+	mkdir -p bin
+	$(CXX) $(CXXFLAGS) -o $@ det.cpp $(LDFLAGS) $(LDLIBS)

@@ -1,0 +1,20 @@
+  [0] start ode (codipack)
+  [1] def   ode                                13.248 s ✓
+  [2] eval  ode::primal     n=1000,s=1          2.212 s ~         0ms prepare,         0ms evaluate × 263304 ✓
+  [4] eval  ode::gradient   n=1000,s=1          1.041 s ~         0ms prepare,         0ms evaluate × 13042 ✓
+  [6] eval  ode::primal     n=1000,s=10         1.109 s ~         0ms prepare,         0ms evaluate × 29225 ✓
+  [8] eval  ode::gradient   n=1000,s=10           996ms ~         0ms prepare,         0ms evaluate × 1879 ✓
+ [10] eval  ode::primal     n=10000,s=1         1.060 s ~         0ms prepare,         0ms evaluate × 6037 ✓
+ [12] eval  ode::gradient   n=10000,s=1         1.033 s ~         0ms prepare,         0ms evaluate × 1069 ✓
+ [14] eval  ode::primal     n=1000,s=100        1.004 s ~         0ms prepare,         0ms evaluate × 2735 ✓
+ [16] eval  ode::gradient   n=1000,s=100          985ms ~         0ms prepare,         7ms evaluate × 128 ✓
+ [18] eval  ode::primal     n=10000,s=10        1.030 s ~         0ms prepare,         0ms evaluate × 1912 ✓
+ [20] eval  ode::gradient   n=10000,s=10        1.021 s ~         0ms prepare,         5ms evaluate × 196 ✓
+ [22] eval  ode::primal     n=100000,s=1        1.512 s ~         0ms prepare,         3ms evaluate × 287 ✓
+ [24] eval  ode::gradient   n=100000,s=1        1.672 s ~         1ms prepare,        11ms evaluate × 90 ✓
+ [26] eval  ode::primal     n=10000,s=100       1.035 s ~         0ms prepare,         4ms evaluate × 205 ✓
+ [28] eval  ode::gradient   n=10000,s=100       1.044 s ~         0ms prepare,        63ms evaluate × 16 ✓
+ [30] eval  ode::primal     n=100000,s=10       1.602 s ~         0ms prepare,         9ms evaluate × 108 ✓
+ [32] eval  ode::gradient   n=100000,s=10       1.606 s ~         1ms prepare,        56ms evaluate × 18 ✓
+ [34] eval  ode::primal     n=100000,s=100      1.545 s ~         0ms prepare,        68ms evaluate × 15 ✓
+ [36] eval  ode::gradient   n=100000,s=100      1.539 s ~         1ms prepare,       547ms evaluate × 2 ✓

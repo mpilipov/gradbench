@@ -1,0 +1,20 @@
+[0] start ode (adept)
+  [1] def   ode                                12.721 s ✓
+  [2] eval  ode::primal     n=1000,s=1          2.575 s ~         0ms prepare,         0ms evaluate × 302566 ✓
+  [4] eval  ode::gradient   n=1000,s=1          1.026 s ~         0ms prepare,         0ms evaluate × 1857 ✓
+  [6] eval  ode::primal     n=1000,s=10         1.181 s ~         0ms prepare,         0ms evaluate × 27258 ✓
+  [8] eval  ode::gradient   n=1000,s=10         1.012 s ~         0ms prepare,         4ms evaluate × 224 ✓
+ [10] eval  ode::primal     n=10000,s=1         1.082 s ~         0ms prepare,         0ms evaluate × 6186 ✓
+ [12] eval  ode::gradient   n=10000,s=1         1.055 s ~         0ms prepare,         4ms evaluate × 207 ✓
+ [14] eval  ode::primal     n=1000,s=100        1.022 s ~         0ms prepare,         0ms evaluate × 2944 ✓
+ [16] eval  ode::gradient   n=1000,s=100        1.041 s ~         0ms prepare,        43ms evaluate × 24 ✓
+ [18] eval  ode::primal     n=10000,s=10        1.061 s ~         0ms prepare,         0ms evaluate × 1922 ✓
+ [20] eval  ode::gradient   n=10000,s=10        1.149 s ~         0ms prepare,        49ms evaluate × 21 ✓
+ [22] eval  ode::primal     n=100000,s=1        1.508 s ~         0ms prepare,         1ms evaluate × 653 ✓
+ [24] eval  ode::gradient   n=100000,s=1        1.476 s ~         0ms prepare,        74ms evaluate × 14 ✓
+ [26] eval  ode::primal     n=10000,s=100       1.057 s ~         0ms prepare,         4ms evaluate × 215 ✓
+ [28] eval  ode::gradient   n=10000,s=100      10.339 s ~         0ms prepare,    10.273 s evaluate ✓
+ [30] eval  ode::primal     n=100000,s=10       1.947 s ~         0ms prepare,        10ms evaluate × 94 ✓
+ [32] eval  ode::gradient   n=100000,s=10       1.696 s ~         0ms prepare,     1.269 s evaluate ✓
+ [34] eval  ode::primal     n=100000,s=100      1.717 s ~         0ms prepare,       183ms evaluate × 6 ✓
+ [36] eval  ode::gradient   n=100000,s=100     28.829 s ✗

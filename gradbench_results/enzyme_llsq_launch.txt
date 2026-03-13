@@ -1,0 +1,24 @@
+[0] start llsq (enzyme)
+  [1] def   llsq                               14.645 s ✓
+  [2] eval  llsq::primal    n=16,m=128          3.384 s ~         0ms prepare,         0ms evaluate × 447779 ✓
+  [4] eval  llsq::gradient  n=16,m=128          1.666 s ~         0ms prepare,         0ms evaluate × 127764 ✓
+  [6] eval  llsq::primal    n=32,m=128          1.789 s ~         0ms prepare,         0ms evaluate × 186855 ✓
+  [8] eval  llsq::gradient  n=32,m=128          1.240 s ~         0ms prepare,         0ms evaluate × 62898 ✓
+ [10] eval  llsq::primal    n=64,m=128          1.441 s ~         0ms prepare,         0ms evaluate × 97126 ✓
+ [12] eval  llsq::gradient  n=64,m=128          1.140 s ~         0ms prepare,         0ms evaluate × 32440 ✓
+ [14] eval  llsq::primal    n=128,m=128         1.185 s ~         0ms prepare,         0ms evaluate × 52970 ✓
+ [16] eval  llsq::gradient  n=128,m=128         1.069 s ~         0ms prepare,         0ms evaluate × 16226 ✓
+ [18] eval  llsq::primal    n=256,m=128         1.142 s ~         0ms prepare,         0ms evaluate × 24514 ✓
+ [20] eval  llsq::gradient  n=256,m=128         1.037 s ~         0ms prepare,         0ms evaluate × 6562 ✓
+ [22] eval  llsq::primal    n=512,m=128         1.046 s ~         0ms prepare,         0ms evaluate × 12380 ✓
+ [24] eval  llsq::gradient  n=512,m=128         1.020 s ~         0ms prepare,         0ms evaluate × 4196 ✓
+ [26] eval  llsq::primal    n=1024,m=128        1.028 s ~         0ms prepare,         0ms evaluate × 6618 ✓
+ [28] eval  llsq::gradient  n=1024,m=128        1.015 s ~         0ms prepare,         0ms evaluate × 2088 ✓
+ [30] eval  llsq::primal    n=2048,m=128        1.018 s ~         0ms prepare,         0ms evaluate × 3345 ✓
+ [32] eval  llsq::gradient  n=2048,m=128        1.012 s ~         0ms prepare,         0ms evaluate × 1086 ✓
+ [34] eval  llsq::primal    n=4096,m=128        1.013 s ~         0ms prepare,         0ms evaluate × 1677 ✓
+ [36] eval  llsq::gradient  n=4096,m=128        1.014 s ~         0ms prepare,         1ms evaluate × 506 ✓
+ [38] eval  llsq::primal    n=8196,m=128        1.013 s ~         0ms prepare,         1ms evaluate × 541 ✓
+ [40] eval  llsq::gradient  n=8196,m=128        1.008 s ~         0ms prepare,         3ms evaluate × 253 ✓
+ [42] eval  llsq::primal    n=16392,m=128       1.014 s ~         0ms prepare,         2ms evaluate × 409 ✓
+ [44] eval  llsq::gradient  n=16392,m=128       1.010 s ~         0ms prepare,         7ms evaluate × 137 ✓
