@@ -1,0 +1,94 @@
+import os
+import re
+
+# paths to code directories for each library
+DIR_ADEPT = r"C:\Users\Michael\Downloads\gradbench\tools\adept"
+DIR_XAD = r"C:\Users\Michael\Downloads\gradbench\tools\xad"
+
+# How to count API calls
+API_SIGNATURES = {
+    "adept": [
+        r"adept::\w+",           # Any calls from namespave adept (such as adept::Stack, adept::set_values)
+        r"\badouble\b",          # using type adouble (without namespace)
+        r"\.new_recording\s*\(", # Start of tape recording
+        r"\.set_gradient\s*\(",  # set the initial gradient
+        r"\.reverse\s*\(",       # Running of back propagation
+        r"\.get_gradient\s*\(",  # Obtaining the result
+    ],
+    "xad": [
+        r"xad::\w+",             # Any classes/functions from xad (such as xad::tape_type, xad::ad_type)
+        r"\.registerInput\s*\(", # Рregistration of independent variables
+        r"\.computeAdjoint\s*\(",# running of gradient calculation
+        r"\.getDerivative\s*\(", # getting the gradient
+        r"\btape->\w+",          # calling the tape object using pointer
+    ]
+}
+
+def remove_cpp_comments(text):
+    # removes 1-string and multi-string comments
+    pattern = r"//.*?$|/\*.*?\*/"
+    return re.sub(pattern, "", text, flags=re.DOTALL | re.MULTILINE)
+
+def count_api_calls(filepath, library_name):
+    # counts API calls in a particular file
+    if not os.path.exists(filepath):
+        return -1 # the file wasn't found
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        code = f.read() # the file was found
+
+    # clean the code out of comments
+    clean_code = remove_cpp_comments(code)
+
+    total_calls = 0
+    signatures = API_SIGNATURES.get(library_name, [])
+
+    for sig in signatures:
+        # summing up al the API calls in clean_code using patterns
+        matches = re.findall(sig, clean_code)
+        total_calls += len(matches)
+
+    return total_calls
+
+def analyze_directory(directory, library_name):
+    # checks all the .cpp/.hpp files in the directory
+    results = {}
+    if not os.path.exists(directory):
+        print(f"The directory was not found: {directory}")
+        return results
+
+    for filename in os.listdir(directory):
+        if filename.endswith(".cpp") or filename.endswith(".hpp"):
+            filepath = os.path.join(directory, filename)
+            calls = count_api_calls(filepath, library_name)
+
+            # saving the results with removed extension (det.cpp -> det)
+            task_name = filename.split('.')[0]
+            results[task_name] = calls
+
+    return results
+
+def main():
+    print("API calls in the library:")
+
+    adept_results = analyze_directory(DIR_ADEPT, "adept")
+    xad_results = analyze_directory(DIR_XAD, "xad")
+
+    # looks for the common tasks which were solved by both libraries (there are implementations)
+    common_tasks = sorted(list(set(adept_results.keys()) & set(xad_results.keys())))
+
+    if not common_tasks:
+        print("There are no any common tasks for comparisons")
+        return
+
+    # printing the table
+    print(f"{'Task':<15} | {'XAD API Calls':<15} | {'Adept API Calls':<15}")
+    print("-" * 50)
+
+    for task in common_tasks:
+        calls_xad = xad_results[task]
+        calls_adept = adept_results[task]
+        print(f"{task:<15} | {calls_xad:<15} | {calls_adept:<15}")
+
+if __name__ == "__main__":
+    main()

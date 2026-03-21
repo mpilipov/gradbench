@@ -1,0 +1,206 @@
+[0] start det (xad)
+  [1] def   det                              2:38.191   ✓
+  [2] eval  det::primal     5_run0             42.667 s ~         0ms prepare,         0ms evaluate × 200584 ✓
+  [4] eval  det::gradient   5_run0              1.077 s ~         0ms prepare,         0ms evaluate × 6467 ✓
+  [6] eval  det::primal     5_run1              3.268 s ~         0ms prepare,         0ms evaluate × 298141 ✓
+  [8] eval  det::gradient   5_run1              1.083 s ~         0ms prepare,         0ms evaluate × 6704 ✓
+ [10] eval  det::primal     5_run2              3.590 s ~         0ms prepare,         0ms evaluate × 175260 ✓
+ [12] eval  det::gradient   5_run2                992ms ~         0ms prepare,         0ms evaluate × 5421 ✓
+ [14] eval  det::primal     5_run3              3.912 s ~         0ms prepare,         0ms evaluate × 322307 ✓
+ [16] eval  det::gradient   5_run3              1.068 s ~         0ms prepare,         0ms evaluate × 10248 ✓
+ [18] eval  det::primal     5_run4              3.587 s ~         0ms prepare,         0ms evaluate × 302908 ✓
+ [20] eval  det::gradient   5_run4              1.061 s ~         0ms prepare,         0ms evaluate × 10201 ✓
+ [22] eval  det::primal     5_run5              3.573 s ~         0ms prepare,         0ms evaluate × 408223 ✓
+ [24] eval  det::gradient   5_run5              1.058 s ~         0ms prepare,         0ms evaluate × 9401 ✓
+ [26] eval  det::primal     5_run6              3.775 s ~         0ms prepare,         0ms evaluate × 355416 ✓
+ [28] eval  det::gradient   5_run6              1.063 s ~         0ms prepare,         0ms evaluate × 10182 ✓
+ [30] eval  det::primal     5_run7              3.019 s ~         0ms prepare,         0ms evaluate × 322912 ✓
+ [32] eval  det::gradient   5_run7              1.069 s ~         0ms prepare,         0ms evaluate × 8161 ✓
+ [34] eval  det::primal     5_run8              3.435 s ~         0ms prepare,         0ms evaluate × 308899 ✓
+ [36] eval  det::gradient   5_run8              1.077 s ~         0ms prepare,         0ms evaluate × 11909 ✓
+ [38] eval  det::primal     5_run9              5.296 s ~         0ms prepare,         0ms evaluate × 399108 ✓
+ [40] eval  det::gradient   5_run9              1.092 s ~         0ms prepare,         0ms evaluate × 10613 ✓
+ [42] eval  det::primal     5_run10             7.628 s ~         0ms prepare,         0ms evaluate × 379980 ✓
+ [44] eval  det::gradient   5_run10             1.080 s ~         0ms prepare,         0ms evaluate × 10563 ✓
+ [46] eval  det::primal     5_run11             5.624 s ~         0ms prepare,         0ms evaluate × 251015 ✓
+ [48] eval  det::gradient   5_run11             1.062 s ~         0ms prepare,         0ms evaluate × 5494 ✓
+ [50] eval  det::primal     5_run12             5.328 s ~         0ms prepare,         0ms evaluate × 215371 ✓
+ [52] eval  det::gradient   5_run12             1.063 s ~         0ms prepare,         0ms evaluate × 6674 ✓
+ [54] eval  det::primal     5_run13             4.664 s ~         0ms prepare,         0ms evaluate × 294409 ✓
+ [56] eval  det::gradient   5_run13             1.062 s ~         0ms prepare,         0ms evaluate × 5837 ✓
+ [58] eval  det::primal     5_run14             4.676 s ~         0ms prepare,         0ms evaluate × 379599 ✓
+ [60] eval  det::gradient   5_run14             1.180 s ~         0ms prepare,         0ms evaluate × 8355 ✓
+ [62] eval  det::primal     5_run15             2.814 s ~         0ms prepare,         0ms evaluate × 213286 ✓
+ [64] eval  det::gradient   5_run15             1.052 s ~         0ms prepare,         0ms evaluate × 10608 ✓
+ [66] eval  det::primal     5_run16             5.296 s ~         0ms prepare,         0ms evaluate × 370754 ✓
+ [68] eval  det::gradient   5_run16             1.281 s ~         0ms prepare,         0ms evaluate × 4366 ✓
+ [70] eval  det::primal     6_run0              1.359 s ~         0ms prepare,         0ms evaluate × 45095 ✓
+ [72] eval  det::gradient   6_run0              1.032 s ~         0ms prepare,         0ms evaluate × 1530 ✓
+ [74] eval  det::primal     6_run1              1.900 s ~         0ms prepare,         0ms evaluate × 47330 ✓
+ [76] eval  det::gradient   6_run1              1.024 s ~         0ms prepare,         0ms evaluate × 1488 ✓
+ [78] eval  det::primal     6_run2              1.551 s ~         0ms prepare,         0ms evaluate × 48552 ✓
+ [80] eval  det::gradient   6_run2              1.026 s ~         0ms prepare,         0ms evaluate × 1570 ✓
+ [82] eval  det::primal     6_run3              1.415 s ~         0ms prepare,         0ms evaluate × 71732 ✓
+ [84] eval  det::gradient   6_run3              1.023 s ~         0ms prepare,         0ms evaluate × 2249 ✓
+ [86] eval  det::primal     6_run4              1.375 s ~         0ms prepare,         0ms evaluate × 48467 ✓
+ [88] eval  det::gradient   6_run4              1.021 s ~         0ms prepare,         0ms evaluate × 1794 ✓
+ [90] eval  det::primal     6_run5              1.400 s ~         0ms prepare,         0ms evaluate × 60756 ✓
+ [92] eval  det::gradient   6_run5              1.028 s ~         0ms prepare,         0ms evaluate × 1618 ✓
+ [94] eval  det::primal     6_run6              1.391 s ~         0ms prepare,         0ms evaluate × 54786 ✓
+ [96] eval  det::gradient   6_run6              1.020 s ~         0ms prepare,         0ms evaluate × 2286 ✓
+ [98] eval  det::primal     6_run7              1.572 s ~         0ms prepare,         0ms evaluate × 73968 ✓
+[100] eval  det::gradient   6_run7              1.017 s ~         0ms prepare,         0ms evaluate × 1769 ✓
+[102] eval  det::primal     6_run8              1.439 s ~         0ms prepare,         0ms evaluate × 72160 ✓
+[104] eval  det::gradient   6_run8              1.042 s ~         0ms prepare,         0ms evaluate × 1786 ✓
+[106] eval  det::primal     6_run9              1.381 s ~         0ms prepare,         0ms evaluate × 48670 ✓
+[108] eval  det::gradient   6_run9              1.021 s ~         0ms prepare,         0ms evaluate × 1685 ✓
+[110] eval  det::primal     6_run10             1.373 s ~         0ms prepare,         0ms evaluate × 51886 ✓
+[112] eval  det::gradient   6_run10             1.022 s ~         0ms prepare,         0ms evaluate × 1558 ✓
+[114] eval  det::primal     6_run11             1.468 s ~         0ms prepare,         0ms evaluate × 61969 ✓
+[116] eval  det::gradient   6_run11             1.022 s ~         0ms prepare,         0ms evaluate × 1930 ✓
+[118] eval  det::primal     6_run12             1.377 s ~         0ms prepare,         0ms evaluate × 71267 ✓
+[120] eval  det::gradient   6_run12             1.025 s ~         0ms prepare,         0ms evaluate × 2230 ✓
+[122] eval  det::primal     6_run13             1.533 s ~         0ms prepare,         0ms evaluate × 78332 ✓
+[124] eval  det::gradient   6_run13             1.022 s ~         0ms prepare,         0ms evaluate × 1622 ✓
+[126] eval  det::primal     6_run14             1.358 s ~         0ms prepare,         0ms evaluate × 57594 ✓
+[128] eval  det::gradient   6_run14             1.023 s ~         0ms prepare,         0ms evaluate × 1785 ✓
+[130] eval  det::primal     6_run15             1.601 s ~         0ms prepare,         0ms evaluate × 63666 ✓
+[132] eval  det::gradient   6_run15             1.026 s ~         0ms prepare,         0ms evaluate × 1791 ✓
+[134] eval  det::primal     6_run16             1.447 s ~         0ms prepare,         0ms evaluate × 55338 ✓
+[136] eval  det::gradient   6_run16             1.025 s ~         0ms prepare,         0ms evaluate × 1856 ✓
+[138] eval  det::primal     7_run0              1.064 s ~         0ms prepare,         0ms evaluate × 6789 ✓
+[140] eval  det::gradient   7_run0              1.012 s ~         0ms prepare,         3ms evaluate × 271 ✓
+[142] eval  det::primal     7_run1              1.080 s ~         0ms prepare,         0ms evaluate × 9391 ✓
+[144] eval  det::gradient   7_run1              1.011 s ~         0ms prepare,         2ms evaluate × 344 ✓
+[146] eval  det::primal     7_run2              1.079 s ~         0ms prepare,         0ms evaluate × 11438 ✓
+[148] eval  det::gradient   7_run2              1.009 s ~         0ms prepare,         2ms evaluate × 355 ✓
+[150] eval  det::primal     7_run3              1.094 s ~         0ms prepare,         0ms evaluate × 10950 ✓
+[152] eval  det::gradient   7_run3              1.008 s ~         0ms prepare,         2ms evaluate × 346 ✓
+[154] eval  det::primal     7_run4              1.081 s ~         0ms prepare,         0ms evaluate × 8681 ✓
+[156] eval  det::gradient   7_run4              1.012 s ~         0ms prepare,        23ms evaluate × 43 ✓
+[158] eval  det::primal     7_run5              1.069 s ~         0ms prepare,         0ms evaluate × 8250 ✓
+[160] eval  det::gradient   7_run5              1.013 s ~         0ms prepare,         4ms evaluate × 246 ✓
+[162] eval  det::primal     7_run6              1.064 s ~         0ms prepare,         0ms evaluate × 8258 ✓
+[164] eval  det::gradient   7_run6              1.010 s ~         0ms prepare,         2ms evaluate × 341 ✓
+[166] eval  det::primal     7_run7              1.082 s ~         0ms prepare,         0ms evaluate × 10443 ✓
+[168] eval  det::gradient   7_run7              1.013 s ~         0ms prepare,         3ms evaluate × 305 ✓
+[170] eval  det::primal     7_run8              1.061 s ~         0ms prepare,         0ms evaluate × 9325 ✓
+[172] eval  det::gradient   7_run8              1.013 s ~         0ms prepare,         3ms evaluate × 329 ✓
+[174] eval  det::primal     7_run9              1.071 s ~         0ms prepare,         0ms evaluate × 8355 ✓
+[176] eval  det::gradient   7_run9              1.014 s ~         0ms prepare,         3ms evaluate × 265 ✓
+[178] eval  det::primal     7_run10             1.079 s ~         0ms prepare,         0ms evaluate × 9133 ✓
+[180] eval  det::gradient   7_run10             1.012 s ~         0ms prepare,         3ms evaluate × 315 ✓
+[182] eval  det::primal     7_run11             1.124 s ~         0ms prepare,         0ms evaluate × 11126 ✓
+[184] eval  det::gradient   7_run11             1.011 s ~         0ms prepare,         3ms evaluate × 257 ✓
+[186] eval  det::primal     7_run12             1.070 s ~         0ms prepare,         0ms evaluate × 7664 ✓
+[188] eval  det::gradient   7_run12             1.014 s ~         0ms prepare,         5ms evaluate × 185 ✓
+[190] eval  det::primal     7_run13             1.073 s ~         0ms prepare,         0ms evaluate × 9974 ✓
+[192] eval  det::gradient   7_run13             1.012 s ~         0ms prepare,         4ms evaluate × 229 ✓
+[194] eval  det::primal     7_run14             1.078 s ~         0ms prepare,         0ms evaluate × 7826 ✓
+[196] eval  det::gradient   7_run14             1.012 s ~         0ms prepare,         3ms evaluate × 284 ✓
+[198] eval  det::primal     7_run15             1.083 s ~         0ms prepare,         0ms evaluate × 9280 ✓
+[200] eval  det::gradient   7_run15             1.009 s ~         0ms prepare,         3ms evaluate × 323 ✓
+[202] eval  det::primal     7_run16             1.089 s ~         0ms prepare,         0ms evaluate × 9419 ✓
+[204] eval  det::gradient   7_run16             1.014 s ~         0ms prepare,         3ms evaluate × 276 ✓
+[206] eval  det::primal     8_run0              1.016 s ~         0ms prepare,         0ms evaluate × 1067 ✓
+[208] eval  det::gradient   8_run0              3.320 s ~         0ms prepare,     3.312 s evaluate ✓
+[210] eval  det::primal     8_run1              1.017 s ~         0ms prepare,         0ms evaluate × 1263 ✓
+[212] eval  det::gradient   8_run1              1.021 s ~         0ms prepare,        24ms evaluate × 42 ✓
+[214] eval  det::primal     8_run2              1.028 s ~         0ms prepare,         0ms evaluate × 1397 ✓
+[216] eval  det::gradient   8_run2              1.018 s ~         0ms prepare,        19ms evaluate × 53 ✓
+[218] eval  det::primal     8_run3              1.017 s ~         0ms prepare,         0ms evaluate × 1456 ✓
+[220] eval  det::gradient   8_run3              1.011 s ~         0ms prepare,        20ms evaluate × 48 ✓
+[222] eval  det::primal     8_run4              1.016 s ~         0ms prepare,         0ms evaluate × 1452 ✓
+[224] eval  det::gradient   8_run4              1.037 s ~         0ms prepare,        79ms evaluate × 13 ✓
+[226] eval  det::primal     8_run5              1.022 s ~         0ms prepare,         1ms evaluate × 947 ✓
+[228] eval  det::gradient   8_run5              1.016 s ~         0ms prepare,        30ms evaluate × 33 ✓
+[230] eval  det::primal     8_run6              1.018 s ~         0ms prepare,         0ms evaluate × 1167 ✓
+[232] eval  det::gradient   8_run6              1.014 s ~         0ms prepare,        20ms evaluate × 50 ✓
+[234] eval  det::primal     8_run7              1.024 s ~         0ms prepare,         1ms evaluate × 834 ✓
+[236] eval  det::gradient   8_run7              1.333 s ~         0ms prepare,        77ms evaluate × 17 ✓
+[238] eval  det::primal     8_run8              1.017 s ~         0ms prepare,         0ms evaluate × 1092 ✓
+[240] eval  det::gradient   8_run8              1.030 s ~         0ms prepare,        21ms evaluate × 48 ✓
+[242] eval  det::primal     8_run9              1.020 s ~         0ms prepare,         1ms evaluate × 935 ✓
+[244] eval  det::gradient   8_run9              1.040 s ~         0ms prepare,        54ms evaluate × 19 ✓
+[246] eval  det::primal     8_run10             1.020 s ~         0ms prepare,         1ms evaluate × 725 ✓
+[248] eval  det::gradient   8_run10             1.033 s ~         0ms prepare,        27ms evaluate × 37 ✓
+[250] eval  det::primal     8_run11             1.016 s ~         0ms prepare,         0ms evaluate × 1091 ✓
+[252] eval  det::gradient   8_run11             1.011 s ~         0ms prepare,        22ms evaluate × 44 ✓
+[254] eval  det::primal     8_run12             1.017 s ~         0ms prepare,         0ms evaluate × 1224 ✓
+[256] eval  det::gradient   8_run12             1.020 s ~         0ms prepare,        28ms evaluate × 36 ✓
+[258] eval  det::primal     8_run13             1.016 s ~         0ms prepare,         0ms evaluate × 1002 ✓
+[260] eval  det::gradient   8_run13             1.021 s ~         0ms prepare,        28ms evaluate × 36 ✓
+[262] eval  det::primal     8_run14             1.028 s ~         0ms prepare,         1ms evaluate × 848 ✓
+[264] eval  det::gradient   8_run14             1.015 s ~         0ms prepare,        40ms evaluate × 25 ✓
+[266] eval  det::primal     8_run15             1.027 s ~         0ms prepare,         1ms evaluate × 634 ✓
+[268] eval  det::gradient   8_run15             1.030 s ~         0ms prepare,        33ms evaluate × 30 ✓
+[270] eval  det::primal     8_run16             1.019 s ~         0ms prepare,         0ms evaluate × 1034 ✓
+[272] eval  det::gradient   8_run16             1.017 s ~         0ms prepare,        25ms evaluate × 40 ✓
+[274] eval  det::primal     9_run0              1.010 s ~         0ms prepare,         6ms evaluate × 144 ✓
+[276] eval  det::gradient   9_run0              3.888 s ~         0ms prepare,     3.885 s evaluate ✓
+[278] eval  det::primal     9_run1              1.014 s ~         0ms prepare,         7ms evaluate × 130 ✓
+[280] eval  det::gradient   9_run1              1.688 s ~         0ms prepare,     1.682 s evaluate ✓
+[282] eval  det::primal     9_run2              1.011 s ~         0ms prepare,         8ms evaluate × 121 ✓
+[284] eval  det::gradient   9_run2              1.148 s ~         0ms prepare,       190ms evaluate × 6 ✓
+[286] eval  det::primal     9_run3              1.024 s ~         0ms prepare,         8ms evaluate × 117 ✓
+[288] eval  det::gradient   9_run3              1.075 s ~         0ms prepare,       353ms evaluate × 3 ✓
+[290] eval  det::primal     9_run4              1.018 s ~         0ms prepare,         9ms evaluate × 103 ✓
+[292] eval  det::gradient   9_run4              1.061 s ~         0ms prepare,       263ms evaluate × 4 ✓
+[294] eval  det::primal     9_run5              1.011 s ~         0ms prepare,         8ms evaluate × 121 ✓
+[296] eval  det::gradient   9_run5              1.646 s ~         0ms prepare,       818ms evaluate × 2 ✓
+[298] eval  det::primal     9_run6              1.013 s ~         0ms prepare,         7ms evaluate × 142 ✓
+[300] eval  det::gradient   9_run6              1.138 s ~         0ms prepare,       225ms evaluate × 5 ✓
+[302] eval  det::primal     9_run7              1.015 s ~         0ms prepare,         8ms evaluate × 113 ✓
+[304] eval  det::gradient   9_run7              2.243 s ~         0ms prepare,       745ms evaluate × 3 ✓
+[306] eval  det::primal     9_run8              1.015 s ~         0ms prepare,         7ms evaluate × 131 ✓
+[308] eval  det::gradient   9_run8              1.151 s ~         0ms prepare,       285ms evaluate × 4 ✓
+[310] eval  det::primal     9_run9              1.011 s ~         0ms prepare,         8ms evaluate × 121 ✓
+[312] eval  det::gradient   9_run9              1.158 s ~         0ms prepare,       230ms evaluate × 5 ✓
+[314] eval  det::primal     9_run10             1.014 s ~         0ms prepare,         8ms evaluate × 125 ✓
+[316] eval  det::gradient   9_run10             1.169 s ~         0ms prepare,       232ms evaluate × 5 ✓
+[318] eval  det::primal     9_run11             1.012 s ~         0ms prepare,         6ms evaluate × 165 ✓
+[320] eval  det::gradient   9_run11             1.087 s ~         0ms prepare,       214ms evaluate × 5 ✓
+[322] eval  det::primal     9_run12             1.012 s ~         0ms prepare,         7ms evaluate × 136 ✓
+[324] eval  det::gradient   9_run12             1.219 s ~         0ms prepare,       202ms evaluate × 6 ✓
+[326] eval  det::primal     9_run13             1.009 s ~         0ms prepare,         7ms evaluate × 132 ✓
+[328] eval  det::gradient   9_run13             1.043 s ~         0ms prepare,       517ms evaluate × 2 ✓
+[330] eval  det::primal     9_run14             1.019 s ~         0ms prepare,         7ms evaluate × 138 ✓
+[332] eval  det::gradient   9_run14             1.203 s ~         0ms prepare,       298ms evaluate × 4 ✓
+[334] eval  det::primal     9_run15             1.014 s ~         0ms prepare,         8ms evaluate × 119 ✓
+[336] eval  det::gradient   9_run15             1.149 s ~         0ms prepare,       228ms evaluate × 5 ✓
+[338] eval  det::primal     9_run16             1.017 s ~         0ms prepare,         6ms evaluate × 155 ✓
+[340] eval  det::gradient   9_run16             1.162 s ~         0ms prepare,       164ms evaluate × 7 ✓
+[342] eval  det::primal     10_run0             1.041 s ~         0ms prepare,        86ms evaluate × 12 ✓
+[344] eval  det::gradient   10_run0          4:11.505   ~         0ms prepare,  4:11.780   evaluate ✓
+[346] eval  det::primal     10_run1             1.082 s ~         0ms prepare,        82ms evaluate × 13 ✓
+[348] eval  det::gradient   10_run1             6.382 s ~         0ms prepare,     4.249 s evaluate ✓
+[350] eval  det::primal     10_run2             1.053 s ~         0ms prepare,        65ms evaluate × 16 ✓
+[352] eval  det::gradient   10_run2             4.225 s ~         0ms prepare,     4.221 s evaluate ✓
+[354] eval  det::primal     10_run3             1.029 s ~         0ms prepare,        92ms evaluate × 11 ✓
+[356] eval  det::gradient   10_run3             4.813 s ~         0ms prepare,     4.806 s evaluate ✓
+[358] eval  det::primal     10_run4             1.050 s ~         0ms prepare,        74ms evaluate × 14 ✓
+[360] eval  det::gradient   10_run4          1:33.326   ~         0ms prepare,  1:33.905   evaluate ✓
+[362] eval  det::primal     10_run5             1.080 s ~         0ms prepare,        79ms evaluate × 13 ✓
+[364] eval  det::gradient   10_run5            40.192 s ~         0ms prepare,    40.251 s evaluate ✓
+[366] eval  det::primal     10_run6             1.024 s ~         0ms prepare,        84ms evaluate × 12 ✓
+[368] eval  det::gradient   10_run6             3.713 s ~         0ms prepare,     3.703 s evaluate ✓
+[370] eval  det::primal     10_run7             1.033 s ~         0ms prepare,        93ms evaluate × 11 ✓
+[372] eval  det::gradient   10_run7             8.881 s ~         0ms prepare,     8.879 s evaluate ✓
+[374] eval  det::primal     10_run8             1.062 s ~         0ms prepare,        75ms evaluate × 14 ✓
+[376] eval  det::gradient   10_run8             4.252 s ~         0ms prepare,     4.245 s evaluate ✓
+[378] eval  det::primal     10_run9             1.025 s ~         0ms prepare,        72ms evaluate × 14 ✓
+[380] eval  det::gradient   10_run9             3.050 s ~         0ms prepare,     3.044 s evaluate ✓
+[382] eval  det::primal     10_run10            1.077 s ~         0ms prepare,        71ms evaluate × 15 ✓
+[384] eval  det::gradient   10_run10            2.801 s ~         0ms prepare,     2.796 s evaluate ✓
+[386] eval  det::primal     10_run11            1.050 s ~         0ms prepare,        80ms evaluate × 13 ✓
+[388] eval  det::gradient   10_run11            4.350 s ~         0ms prepare,     4.339 s evaluate ✓
+[390] eval  det::primal     10_run12            1.048 s ~         0ms prepare,        69ms evaluate × 15 ✓
+[392] eval  det::gradient   10_run12            2.185 s ~         0ms prepare,     2.175 s evaluate ✓
+[394] eval  det::primal     10_run13            1.035 s ~         0ms prepare,       102ms evaluate × 10 ✓
+[396] eval  det::gradient   10_run13            5.537 s ~         0ms prepare,     5.526 s evaluate ✓
+[398] eval  det::primal     10_run14            1.361 s ~         0ms prepare,        86ms evaluate × 13 ✓
+[400] eval  det::gradient   10_run14           27.699 s ~         0ms prepare,    27.709 s evaluate ✓
+[402] eval  det::primal     10_run15              992ms ~         0ms prepare,        81ms evaluate × 13 ✓
+[404] eval  det::gradient   10_run15            2.316 s ~         0ms prepare,     2.502 s evaluate ✓
+[406] eval  det::primal     10_run16            1.054 s ~         0ms prepare,        74ms evaluate × 14 ✓
+[408] eval  det::gradient   10_run16            2.867 s ~         0ms prepare,     2.867 s evaluate ✓
