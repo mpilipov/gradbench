@@ -1,0 +1,222 @@
+[0] start ode (adept)
+  [1] def   ode                                20.200 s ✓
+  [2] eval  ode::primal     n=1000,s=1          2.301 s ~         0ms prepare,         0ms evaluate × 224989 ✓
+  [4] eval  ode::gradient   n=1000,s=1          1.034 s ~         0ms prepare,         0ms evaluate × 1599 ✓
+  [6] eval  ode::primal     n=1000,s=2          1.697 s ~         0ms prepare,         0ms evaluate × 121982 ✓
+  [8] eval  ode::gradient   n=1000,s=2          1.038 s ~         0ms prepare,         1ms evaluate × 900 ✓
+ [10] eval  ode::primal     n=2500,s=1          1.506 s ~         0ms prepare,         0ms evaluate × 89856 ✓
+ [12] eval  ode::gradient   n=2500,s=1          1.027 s ~         0ms prepare,         1ms evaluate × 522 ✓
+ [14] eval  ode::primal     n=1000,s=5          1.303 s ~         0ms prepare,         0ms evaluate × 34945 ✓
+ [16] eval  ode::gradient   n=1000,s=5          1.017 s ~         0ms prepare,         2ms evaluate × 351 ✓
+ [18] eval  ode::primal     n=2500,s=2          1.287 s ~         0ms prepare,         0ms evaluate × 49233 ✓
+ [20] eval  ode::gradient   n=2500,s=2          1.094 s ~         0ms prepare,         2ms evaluate × 412 ✓
+ [22] eval  ode::primal     n=5000,s=1          1.132 s ~         0ms prepare,         0ms evaluate × 21240 ✓
+ [24] eval  ode::gradient   n=5000,s=1          1.033 s ~         0ms prepare,         2ms evaluate × 351 ✓
+ [26] eval  ode::primal     n=7500,s=1          1.098 s ~         0ms prepare,         0ms evaluate × 8902 ✓
+ [28] eval  ode::gradient   n=7500,s=1          1.044 s ~         0ms prepare,         4ms evaluate × 220 ✓
+ [30] eval  ode::primal     n=1000,s=10         1.153 s ~         0ms prepare,         0ms evaluate × 24539 ✓
+ [32] eval  ode::gradient   n=1000,s=10         1.014 s ~         0ms prepare,         4ms evaluate × 228 ✓
+ [34] eval  ode::primal     n=5000,s=2          1.132 s ~         0ms prepare,         0ms evaluate × 13919 ✓
+ [36] eval  ode::gradient   n=5000,s=2          1.033 s ~         0ms prepare,         4ms evaluate × 230 ✓
+ [38] eval  ode::primal     n=10000,s=1         1.125 s ~         0ms prepare,         0ms evaluate × 4648 ✓
+ [40] eval  ode::gradient   n=10000,s=1         1.092 s ~         0ms prepare,         7ms evaluate × 133 ✓
+ [42] eval  ode::primal     n=2500,s=5          1.136 s ~         0ms prepare,         0ms evaluate × 21301 ✓
+ [44] eval  ode::gradient   n=2500,s=5          1.033 s ~         0ms prepare,         6ms evaluate × 151 ✓
+ [46] eval  ode::primal     n=1000,s=15         1.156 s ~         0ms prepare,         0ms evaluate × 19909 ✓
+ [48] eval  ode::gradient   n=1000,s=15         1.013 s ~         0ms prepare,         6ms evaluate × 162 ✓
+ [50] eval  ode::primal     n=7500,s=2          1.085 s ~         0ms prepare,         0ms evaluate × 5551 ✓
+ [52] eval  ode::gradient   n=7500,s=2          1.082 s ~         0ms prepare,        13ms evaluate × 75 ✓
+ [54] eval  ode::primal     n=15000,s=1         1.136 s ~         0ms prepare,         0ms evaluate × 2827 ✓
+ [56] eval  ode::gradient   n=15000,s=1         1.084 s ~         0ms prepare,         9ms evaluate × 108 ✓
+ [58] eval  ode::primal     n=1000,s=20         1.135 s ~         0ms prepare,         0ms evaluate × 14897 ✓
+ [60] eval  ode::gradient   n=1000,s=20         1.019 s ~         0ms prepare,        13ms evaluate × 73 ✓
+ [62] eval  ode::primal     n=10000,s=2         1.145 s ~         0ms prepare,         0ms evaluate × 3777 ✓
+ [64] eval  ode::gradient   n=10000,s=2         1.061 s ~         0ms prepare,         8ms evaluate × 120 ✓
+ [66] eval  ode::primal     n=20000,s=1         1.131 s ~         0ms prepare,         0ms evaluate × 3578 ✓
+ [68] eval  ode::gradient   n=20000,s=1         1.193 s ~         0ms prepare,        21ms evaluate × 48 ✓
+ [70] eval  ode::primal     n=1000,s=25         1.080 s ~         0ms prepare,         0ms evaluate × 9846 ✓
+ [72] eval  ode::gradient   n=1000,s=25         1.048 s ~         0ms prepare,        15ms evaluate × 67 ✓
+ [74] eval  ode::primal     n=2500,s=10         1.126 s ~         0ms prepare,         0ms evaluate × 8235 ✓
+ [76] eval  ode::gradient   n=2500,s=10         1.032 s ~         0ms prepare,        11ms evaluate × 86 ✓
+ [78] eval  ode::primal     n=5000,s=5          1.072 s ~         0ms prepare,         0ms evaluate × 6328 ✓
+ [80] eval  ode::gradient   n=5000,s=5          1.041 s ~         0ms prepare,         9ms evaluate × 108 ✓
+ [82] eval  ode::primal     n=25000,s=1         1.134 s ~         0ms prepare,         0ms evaluate × 2050 ✓
+ [84] eval  ode::gradient   n=25000,s=1         1.201 s ~         0ms prepare,        13ms evaluate × 73 ✓
+ [86] eval  ode::primal     n=1000,s=30         1.071 s ~         0ms prepare,         0ms evaluate × 12000 ✓
+ [88] eval  ode::gradient   n=1000,s=30         1.018 s ~         0ms prepare,         9ms evaluate × 104 ✓
+ [90] eval  ode::primal     n=15000,s=2         1.114 s ~         0ms prepare,         0ms evaluate × 2359 ✓
+ [92] eval  ode::gradient   n=15000,s=2         1.139 s ~         0ms prepare,        12ms evaluate × 79 ✓
+ [94] eval  ode::primal     n=30000,s=1         1.155 s ~         0ms prepare,         0ms evaluate × 1793 ✓
+ [96] eval  ode::gradient   n=30000,s=1         1.164 s ~         0ms prepare,        15ms evaluate × 64 ✓
+ [98] eval  ode::primal     n=2500,s=15         1.074 s ~         0ms prepare,         0ms evaluate × 7936 ✓
+[100] eval  ode::gradient   n=2500,s=15         1.021 s ~         0ms prepare,        17ms evaluate × 58 ✓
+[102] eval  ode::primal     n=7500,s=5          1.069 s ~         0ms prepare,         0ms evaluate × 3877 ✓
+[104] eval  ode::gradient   n=7500,s=5          1.059 s ~         0ms prepare,        24ms evaluate × 42 ✓
+[106] eval  ode::primal     n=1000,s=40         1.058 s ~         0ms prepare,         0ms evaluate × 6803 ✓
+[108] eval  ode::gradient   n=1000,s=40         1.015 s ~         0ms prepare,        18ms evaluate × 53 ✓
+[110] eval  ode::primal     n=20000,s=2         1.117 s ~         0ms prepare,         0ms evaluate × 2522 ✓
+[112] eval  ode::gradient   n=20000,s=2         1.123 s ~         0ms prepare,        22ms evaluate × 46 ✓
+[114] eval  ode::primal     n=40000,s=1         1.213 s ~         0ms prepare,         0ms evaluate × 1754 ✓
+[116] eval  ode::gradient   n=40000,s=1         1.248 s ~         0ms prepare,        24ms evaluate × 41 ✓
+[118] eval  ode::primal     n=1000,s=50         1.050 s ~         0ms prepare,         0ms evaluate × 4538 ✓
+[120] eval  ode::gradient   n=1000,s=50         1.019 s ~         0ms prepare,        24ms evaluate × 41 ✓
+[122] eval  ode::primal     n=2500,s=20         1.054 s ~         0ms prepare,         0ms evaluate × 5658 ✓
+[124] eval  ode::gradient   n=2500,s=20         1.019 s ~         0ms prepare,        21ms evaluate × 47 ✓
+[126] eval  ode::primal     n=5000,s=10         1.050 s ~         0ms prepare,         0ms evaluate × 4377 ✓
+[128] eval  ode::gradient   n=5000,s=10         1.044 s ~         0ms prepare,        21ms evaluate × 47 ✓
+[130] eval  ode::primal     n=10000,s=5         1.074 s ~         0ms prepare,         0ms evaluate × 2354 ✓
+[132] eval  ode::gradient   n=10000,s=5         1.087 s ~         0ms prepare,        32ms evaluate × 31 ✓
+[134] eval  ode::primal     n=25000,s=2         1.233 s ~         0ms prepare,         0ms evaluate × 1056 ✓
+[136] eval  ode::gradient   n=25000,s=2         1.160 s ~         0ms prepare,        28ms evaluate × 36 ✓
+[138] eval  ode::primal     n=50000,s=1         1.367 s ~         0ms prepare,         1ms evaluate × 851 ✓
+[140] eval  ode::gradient   n=50000,s=1         1.344 s ~         0ms prepare,        35ms evaluate × 29 ✓
+[142] eval  ode::primal     n=30000,s=2         1.247 s ~         0ms prepare,         0ms evaluate × 1331 ✓
+[144] eval  ode::gradient   n=30000,s=2         1.224 s ~         0ms prepare,        35ms evaluate × 29 ✓
+[146] eval  ode::primal     n=2500,s=25         1.044 s ~         0ms prepare,         0ms evaluate × 4128 ✓
+[148] eval  ode::gradient   n=2500,s=25         1.043 s ~         0ms prepare,        26ms evaluate × 38 ✓
+[150] eval  ode::primal     n=2500,s=30         1.044 s ~         0ms prepare,         0ms evaluate × 3869 ✓
+[152] eval  ode::gradient   n=2500,s=30         1.050 s ~         0ms prepare,        39ms evaluate × 26 ✓
+[154] eval  ode::primal     n=5000,s=15         1.054 s ~         0ms prepare,         0ms evaluate × 2971 ✓
+[156] eval  ode::gradient   n=5000,s=15         1.065 s ~         0ms prepare,        38ms evaluate × 27 ✓
+[158] eval  ode::primal     n=7500,s=10         1.061 s ~         0ms prepare,         0ms evaluate × 2272 ✓
+[160] eval  ode::gradient   n=7500,s=10         1.157 s ~         0ms prepare,        55ms evaluate × 19 ✓
+[162] eval  ode::primal     n=15000,s=5         1.095 s ~         0ms prepare,         0ms evaluate × 1707 ✓
+[164] eval  ode::gradient   n=15000,s=5         1.113 s ~         0ms prepare,        41ms evaluate × 25 ✓
+[166] eval  ode::primal     n=40000,s=2         1.223 s ~         0ms prepare,         0ms evaluate × 1149 ✓
+[168] eval  ode::gradient   n=40000,s=2         1.281 s ~         0ms prepare,        61ms evaluate × 17 ✓
+[170] eval  ode::primal     n=2500,s=40         1.034 s ~         0ms prepare,         0ms evaluate × 2358 ✓
+[172] eval  ode::gradient   n=2500,s=40         1.028 s ~         0ms prepare,        62ms evaluate × 16 ✓
+[174] eval  ode::primal     n=5000,s=20         1.050 s ~         0ms prepare,         0ms evaluate × 2052 ✓
+[176] eval  ode::gradient   n=5000,s=20         1.039 s ~         0ms prepare,        59ms evaluate × 17 ✓
+[178] eval  ode::primal     n=10000,s=10        1.074 s ~         0ms prepare,         0ms evaluate × 1594 ✓
+[180] eval  ode::gradient   n=10000,s=10        1.105 s ~         0ms prepare,        51ms evaluate × 20 ✓
+[182] eval  ode::primal     n=20000,s=5         1.169 s ~         0ms prepare,         0ms evaluate × 1344 ✓
+[184] eval  ode::gradient   n=20000,s=5         1.126 s ~         0ms prepare,        56ms evaluate × 18 ✓
+[186] eval  ode::primal     n=50000,s=2         1.428 s ~         0ms prepare,         1ms evaluate × 589 ✓
+[188] eval  ode::gradient   n=50000,s=2         1.343 s ~         0ms prepare,        78ms evaluate × 13 ✓
+[190] eval  ode::primal     n=7500,s=15         1.050 s ~         0ms prepare,         0ms evaluate × 1649 ✓
+[192] eval  ode::gradient   n=7500,s=15         1.104 s ~         0ms prepare,        55ms evaluate × 19 ✓
+[194] eval  ode::primal     n=2500,s=50         1.031 s ~         0ms prepare,         0ms evaluate × 2274 ✓
+[196] eval  ode::gradient   n=2500,s=50         1.041 s ~         0ms prepare,        60ms evaluate × 17 ✓
+[198] eval  ode::primal     n=5000,s=25         1.050 s ~         0ms prepare,         0ms evaluate × 1724 ✓
+[200] eval  ode::gradient   n=5000,s=25         1.095 s ~         0ms prepare,        80ms evaluate × 13 ✓
+[202] eval  ode::primal     n=25000,s=5         1.159 s ~         0ms prepare,         1ms evaluate × 885 ✓
+[204] eval  ode::gradient   n=25000,s=5         1.160 s ~         0ms prepare,        68ms evaluate × 15 ✓
+[206] eval  ode::primal     n=5000,s=30         1.044 s ~         0ms prepare,         0ms evaluate × 1582 ✓
+[208] eval  ode::gradient   n=5000,s=30         1.102 s ~         0ms prepare,        97ms evaluate × 11 ✓
+[210] eval  ode::primal     n=7500,s=20         1.058 s ~         0ms prepare,         0ms evaluate × 1335 ✓
+[212] eval  ode::gradient   n=7500,s=20         1.141 s ~         0ms prepare,       120ms evaluate × 9 ✓
+[214] eval  ode::primal     n=10000,s=15        1.109 s ~         0ms prepare,         1ms evaluate × 587 ✓
+[216] eval  ode::gradient   n=10000,s=15        1.159 s ~         0ms prepare,       129ms evaluate × 8 ✓
+[218] eval  ode::primal     n=15000,s=10        1.159 s ~         0ms prepare,         0ms evaluate × 1003 ✓
+[220] eval  ode::gradient   n=15000,s=10        1.169 s ~         0ms prepare,       147ms evaluate × 7 ✓
+[222] eval  ode::primal     n=30000,s=5         1.182 s ~         0ms prepare,         1ms evaluate × 822 ✓
+[224] eval  ode::gradient   n=30000,s=5         1.283 s ~         0ms prepare,       106ms evaluate × 10 ✓
+[226] eval  ode::primal     n=7500,s=25         1.059 s ~         0ms prepare,         1ms evaluate × 910 ✓
+[228] eval  ode::gradient   n=7500,s=25         1.080 s ~         0ms prepare,       114ms evaluate × 9 ✓
+[230] eval  ode::primal     n=5000,s=40         1.045 s ~         0ms prepare,         0ms evaluate × 1191 ✓
+[232] eval  ode::gradient   n=5000,s=40         1.174 s ~         0ms prepare,        98ms evaluate × 11 ✓
+[234] eval  ode::primal     n=10000,s=20        1.064 s ~         0ms prepare,         1ms evaluate × 969 ✓
+[236] eval  ode::gradient   n=10000,s=20        1.071 s ~         0ms prepare,       101ms evaluate × 10 ✓
+[238] eval  ode::primal     n=20000,s=10        1.121 s ~         0ms prepare,         1ms evaluate × 785 ✓
+[240] eval  ode::gradient   n=20000,s=10        1.264 s ~         0ms prepare,       121ms evaluate × 9 ✓
+[242] eval  ode::primal     n=40000,s=5         1.264 s ~         0ms prepare,         1ms evaluate × 537 ✓
+[244] eval  ode::gradient   n=40000,s=5         1.254 s ~         0ms prepare,       116ms evaluate × 9 ✓
+[246] eval  ode::primal     n=7500,s=30         1.057 s ~         0ms prepare,         1ms evaluate × 889 ✓
+[248] eval  ode::gradient   n=7500,s=30         1.121 s ~         0ms prepare,       119ms evaluate × 9 ✓
+[250] eval  ode::primal     n=15000,s=15        1.086 s ~         0ms prepare,         1ms evaluate × 765 ✓
+[252] eval  ode::gradient   n=15000,s=15        1.132 s ~         0ms prepare,       130ms evaluate × 8 ✓
+[254] eval  ode::primal     n=5000,s=50         1.051 s ~         0ms prepare,         1ms evaluate × 838 ✓
+[256] eval  ode::gradient   n=5000,s=50         1.060 s ~         0ms prepare,       146ms evaluate × 7 ✓
+[258] eval  ode::primal     n=10000,s=25        1.068 s ~         0ms prepare,         1ms evaluate × 748 ✓
+[260] eval  ode::gradient   n=10000,s=25        1.141 s ~         0ms prepare,       135ms evaluate × 8 ✓
+[262] eval  ode::primal     n=25000,s=10        1.165 s ~         0ms prepare,         1ms evaluate × 547 ✓
+[264] eval  ode::gradient   n=25000,s=10        1.196 s ~         0ms prepare,       174ms evaluate × 6 ✓
+[266] eval  ode::primal     n=50000,s=5         1.334 s ~         0ms prepare,         2ms evaluate × 391 ✓
+[268] eval  ode::gradient   n=50000,s=5         1.333 s ~         0ms prepare,       173ms evaluate × 6 ✓
+[270] eval  ode::primal     n=7500,s=40         1.050 s ~         0ms prepare,         1ms evaluate × 737 ✓
+[272] eval  ode::gradient   n=7500,s=40         1.123 s ~         0ms prepare,       172ms evaluate × 6 ✓
+[274] eval  ode::primal     n=10000,s=30        1.061 s ~         0ms prepare,         1ms evaluate × 620 ✓
+[276] eval  ode::gradient   n=10000,s=30        1.093 s ~         0ms prepare,       172ms evaluate × 6 ✓
+[278] eval  ode::primal     n=15000,s=20        1.085 s ~         0ms prepare,         1ms evaluate × 538 ✓
+[280] eval  ode::gradient   n=15000,s=20        1.108 s ~         0ms prepare,       168ms evaluate × 6 ✓
+[282] eval  ode::primal     n=20000,s=15        1.204 s ~         0ms prepare,         1ms evaluate × 566 ✓
+[284] eval  ode::gradient   n=20000,s=15        1.222 s ~         0ms prepare,       161ms evaluate × 7 ✓
+[286] eval  ode::primal     n=30000,s=10        1.153 s ~         0ms prepare,         1ms evaluate × 534 ✓
+[288] eval  ode::gradient   n=30000,s=10        1.387 s ~         0ms prepare,       284ms evaluate × 4 ✓
+[290] eval  ode::primal     n=7500,s=50         1.101 s ~         0ms prepare,         3ms evaluate × 262 ✓
+[292] eval  ode::gradient   n=7500,s=50         1.509 s ~         0ms prepare,       355ms evaluate × 4 ✓
+[294] eval  ode::primal     n=15000,s=25        1.266 s ~         0ms prepare,         6ms evaluate × 159 ✓
+[296] eval  ode::gradient   n=15000,s=25        1.386 s ~         0ms prepare,       531ms evaluate × 2 ✓
+[298] eval  ode::primal     n=25000,s=15        1.351 s ~         0ms prepare,         4ms evaluate × 202 ✓
+[300] eval  ode::gradient   n=25000,s=15        1.283 s ~         0ms prepare,       361ms evaluate × 3 ✓
+[302] eval  ode::primal     n=10000,s=40        1.161 s ~         0ms prepare,         3ms evaluate × 266 ✓
+[304] eval  ode::gradient   n=10000,s=40        1.323 s ~         0ms prepare,       394ms evaluate × 3 ✓
+[306] eval  ode::primal     n=20000,s=20        1.218 s ~         0ms prepare,         3ms evaluate × 303 ✓
+[308] eval  ode::gradient   n=20000,s=20        1.250 s ~         0ms prepare,       372ms evaluate × 3 ✓
+[310] eval  ode::primal     n=40000,s=10        1.316 s ~         0ms prepare,         6ms evaluate × 144 ✓
+[312] eval  ode::gradient   n=40000,s=10        1.456 s ~         0ms prepare,       521ms evaluate × 2 ✓
+[314] eval  ode::primal     n=15000,s=30        1.169 s ~         0ms prepare,         3ms evaluate × 272 ✓
+[316] eval  ode::gradient   n=15000,s=30        1.283 s ~         0ms prepare,       384ms evaluate × 3 ✓
+[318] eval  ode::primal     n=30000,s=15        1.185 s ~         0ms prepare,         3ms evaluate × 317 ✓
+[320] eval  ode::gradient   n=30000,s=15        1.253 s ~         0ms prepare,       267ms evaluate × 4 ✓
+[322] eval  ode::primal     n=10000,s=50        1.069 s ~         0ms prepare,         2ms evaluate × 373 ✓
+[324] eval  ode::gradient   n=10000,s=50        1.291 s ~         0ms prepare,       244ms evaluate × 5 ✓
+[326] eval  ode::primal     n=20000,s=25        1.120 s ~         0ms prepare,         3ms evaluate × 314 ✓
+[328] eval  ode::gradient   n=20000,s=25        1.274 s ~         0ms prepare,       383ms evaluate × 3 ✓
+[330] eval  ode::primal     n=25000,s=20        1.206 s ~         0ms prepare,         5ms evaluate × 189 ✓
+[332] eval  ode::gradient   n=25000,s=20        1.231 s ~         0ms prepare,       346ms evaluate × 3 ✓
+[334] eval  ode::primal     n=50000,s=10        1.327 s ~         0ms prepare,         3ms evaluate × 263 ✓
+[336] eval  ode::gradient   n=50000,s=10        1.274 s ~         0ms prepare,       255ms evaluate × 4 ✓
+[338] eval  ode::primal     n=15000,s=40        1.100 s ~         0ms prepare,         3ms evaluate × 267 ✓
+[340] eval  ode::gradient   n=15000,s=40        1.555 s ~         0ms prepare,       479ms evaluate × 3 ✓
+[342] eval  ode::primal     n=20000,s=30        1.131 s ~         0ms prepare,         3ms evaluate × 262 ✓
+[344] eval  ode::gradient   n=20000,s=30        1.443 s ~         0ms prepare,       432ms evaluate × 3 ✓
+[346] eval  ode::primal     n=30000,s=20        1.175 s ~         0ms prepare,         4ms evaluate × 236 ✓
+[348] eval  ode::gradient   n=30000,s=20        1.462 s ~         0ms prepare,       424ms evaluate × 3 ✓
+[350] eval  ode::primal     n=40000,s=15        1.287 s ~         0ms prepare,         4ms evaluate × 212 ✓
+[352] eval  ode::gradient   n=40000,s=15        1.519 s ~         0ms prepare,       417ms evaluate × 3 ✓
+[354] eval  ode::primal     n=25000,s=25        1.185 s ~         0ms prepare,         6ms evaluate × 155 ✓
+[356] eval  ode::gradient   n=25000,s=25        1.190 s ~         0ms prepare,       506ms evaluate × 2 ✓
+[358] eval  ode::primal     n=15000,s=50        1.124 s ~         0ms prepare,         5ms evaluate × 179 ✓
+[360] eval  ode::gradient   n=15000,s=50        1.310 s ~         0ms prepare,       598ms evaluate × 2 ✓
+[362] eval  ode::primal     n=25000,s=30        1.158 s ~         0ms prepare,         4ms evaluate × 204 ✓
+[364] eval  ode::gradient   n=25000,s=30        1.505 s ~         0ms prepare,       448ms evaluate × 3 ✓
+[366] eval  ode::primal     n=30000,s=25        1.171 s ~         0ms prepare,         4ms evaluate × 214 ✓
+[368] eval  ode::gradient   n=30000,s=25        1.417 s ~         0ms prepare,       409ms evaluate × 3 ✓
+[370] eval  ode::primal     n=50000,s=15        1.230 s ~         0ms prepare,         4ms evaluate × 247 ✓
+[372] eval  ode::gradient   n=50000,s=15        1.388 s ~         0ms prepare,       380ms evaluate × 3 ✓
+[374] eval  ode::primal     n=20000,s=40        1.091 s ~         0ms prepare,         4ms evaluate × 240 ✓
+[376] eval  ode::gradient   n=20000,s=40        1.291 s ~         0ms prepare,       396ms evaluate × 3 ✓
+[378] eval  ode::primal     n=40000,s=20        1.182 s ~         0ms prepare,         3ms evaluate × 251 ✓
+[380] eval  ode::gradient   n=40000,s=20        1.313 s ~         0ms prepare,       533ms evaluate × 2 ✓
+[382] eval  ode::primal     n=30000,s=30        1.233 s ~         0ms prepare,         5ms evaluate × 178 ✓
+[384] eval  ode::gradient   n=30000,s=30        1.389 s ~         0ms prepare,       420ms evaluate × 3 ✓
+[386] eval  ode::primal     n=20000,s=50        1.095 s ~         0ms prepare,         5ms evaluate × 200 ✓
+[388] eval  ode::gradient   n=20000,s=50        1.410 s ~         0ms prepare,       433ms evaluate × 3 ✓
+[390] eval  ode::primal     n=25000,s=40        1.106 s ~         0ms prepare,         4ms evaluate × 208 ✓
+[392] eval  ode::gradient   n=25000,s=40        1.336 s ~         0ms prepare,       602ms evaluate × 2 ✓
+[394] eval  ode::primal     n=40000,s=25        1.219 s ~         0ms prepare,         6ms evaluate × 160 ✓
+[396] eval  ode::gradient   n=40000,s=25        1.215 s ~         0ms prepare,       511ms evaluate × 2 ✓
+[398] eval  ode::primal     n=50000,s=20        1.244 s ~         0ms prepare,         5ms evaluate × 187 ✓
+[400] eval  ode::gradient   n=50000,s=20        1.529 s ~         0ms prepare,       432ms evaluate × 3 ✓
+[402] eval  ode::primal     n=30000,s=40        1.138 s ~         0ms prepare,         6ms evaluate × 159 ✓
+[404] eval  ode::gradient   n=30000,s=40        1.495 s ~         0ms prepare,       672ms evaluate × 2 ✓
+[406] eval  ode::primal     n=40000,s=30        1.187 s ~         0ms prepare,         6ms evaluate × 153 ✓
+[408] eval  ode::gradient   n=40000,s=30        1.222 s ~         0ms prepare,     1.030 s evaluate ✓
+[410] eval  ode::primal     n=25000,s=50        1.136 s ~         0ms prepare,         6ms evaluate × 155 ✓
+[412] eval  ode::gradient   n=25000,s=50        1.989 s ~         0ms prepare,       910ms evaluate × 2 ✓
+[414] eval  ode::primal     n=50000,s=25        1.373 s ~         0ms prepare,         8ms evaluate × 114 ✓
+[416] eval  ode::gradient   n=50000,s=25        1.716 s ~         0ms prepare,     1.471 s evaluate ✓
+[418] eval  ode::primal     n=30000,s=50        1.153 s ~         0ms prepare,         8ms evaluate × 118 ✓
+[420] eval  ode::gradient   n=30000,s=50        1.842 s ~         0ms prepare,     1.681 s evaluate ✓
+[422] eval  ode::primal     n=50000,s=30        1.473 s ~         0ms prepare,        12ms evaluate × 80 ✓
+[424] eval  ode::gradient   n=50000,s=30        1.401 s ~         0ms prepare,     1.153 s evaluate ✓
+[426] eval  ode::primal     n=40000,s=40        1.185 s ~         0ms prepare,         7ms evaluate × 126 ✓
+[428] eval  ode::gradient   n=40000,s=40        1.197 s ~         0ms prepare,     1.001 s evaluate ✓
+[430] eval  ode::primal     n=40000,s=50        1.224 s ~         0ms prepare,        15ms evaluate × 64 ✓
+[432] eval  ode::gradient   n=40000,s=50        1.388 s ~         0ms prepare,     1.164 s evaluate ✓
+[434] eval  ode::primal     n=50000,s=40        1.283 s ~         0ms prepare,        13ms evaluate × 77 ✓
+[436] eval  ode::gradient   n=50000,s=40        1.368 s ~         0ms prepare,     1.107 s evaluate ✓
+[438] eval  ode::primal     n=50000,s=50        1.301 s ~         0ms prepare,        13ms evaluate × 73 ✓
+[440] eval  ode::gradient   n=50000,s=50        3.165 s ~         0ms prepare,     2.886 s evaluate ✓

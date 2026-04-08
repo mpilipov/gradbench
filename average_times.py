@@ -3,12 +3,12 @@ import os
 from collections import defaultdict
 
 # 1. Paths to the gradbench results
-file1 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\det_enzyme_run1.txt"
-file2 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\det_enzyme_run2.txt"
-file3 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\det_enzyme_run3.txt"
+file1 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_run1.txt"
+file2 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_run2.txt"
+file3 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_run3.txt"
 
 # 2. Name of the final result data
-output_file = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\enzyme_det_averaged.txt"
+output_file = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_averaged.txt"
 
 def parse_time(val_str, unit):
     # converting time to ms
@@ -29,14 +29,17 @@ def extract_times(filepath, data_dict):
         log_text = f.read()
 
     # pattern takes the total time of the test (3, 4 groups) and number of computations (5 group)
-    pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?gradient\s+([\w_]+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
-
+    #pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?gradient\s+([\w_]+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
+    #for gmm task:
+    #pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?jacobian\s+(\S+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
+    #for llsq task
+    pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?gradient\s+(\S+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
     for line in log_text.strip().split('\n'):
         match = re.search(pattern, line)
         if match:
             test_id = match.group(1)      # test number ([4])
             param = match.group(2)        # test parameters ( 5_run0)
-            total_time_val = match.group(3) # Total time of the test (1.357)
+            total_time_val = match.group(3) # total time of the test (1.357)
             unit = match.group(4)         # s or ms for Total time of the test
             runs_str = match.group(5)
             runs_count = int(runs_str) if runs_str else 1  # number of computaions (63876)
@@ -71,8 +74,8 @@ with open(output_file, 'w', encoding='utf-8') as f:
         # writing only successfull tests
         if len(times) > 0:
             avg_time = sum(times) / len(times)
-            # creating a string to be red by stats.py
-            f.write(f"[{test_id}] eval det::gradient {param} , {avg_time:.9f} s evaluate ✓\n")
+            # creating a string to be red by stats.py ! necessary to replace when the task is changed
+            f.write(f"[{test_id}] eval ode::gradient {param} , {avg_time:.9f} s evaluate ✓\n")
             tests_written += 1
 
 print(f"The process is completed. Were averaged {tests_written} tests (only gradient).")

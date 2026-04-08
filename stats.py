@@ -24,7 +24,8 @@ def parse_log(filepath):
     # 2. Taking type of the test (only if it is jacobian/gradient)
     # 3. Taking time in 7th column (before word 'evaluate')
     # 4. Taking abovementioned data only if there is ✓ in the end of string
-    pattern = r'eval\s+\w+::(?:jacobian|gradient)\s+([\w_]+)\s*,\s*(\d+(?:\.\d+)?)\s*(ms|s)\s+evaluate.*?(✓|✗)'
+    pattern = r'eval\s+\w+::(?:jacobian|gradient)\s+([\w_=,]+)\s*,\s*(\d+(?:\.\d+)?)\s*(ms|s)\s+evaluate.*?(✓|✗)'
+    #pattern = r'eval\s+\w+::(?:jacobian|gradient)\s+([\w_]+)\s*,\s*(\d+(?:\.\d+)?)\s*(ms|s)\s+evaluate.*?(✓|✗)'
     for line in log_text.strip().split('\n'):
         match = re.search(pattern, line)
         if match:
@@ -52,7 +53,7 @@ times_cppad = [cppad_data[t] for t in common_tests]
 # statistical testing
 stat, p_value = stats.wilcoxon(times_xad, times_cppad)
 print(f"Number of common tests for both tools: {len(common_tests)}")
-print(f"Wilcoxon statistic: {stat}")
+print(f"Wilcoxon statistics: {stat}")
 print(f"P-value: {p_value:.5f}")
 
 median_xad = np.median(times_xad)
@@ -60,7 +61,7 @@ median_cppad = np.median(times_cppad)
 iqr_xad = stats.iqr(times_xad)
 iqr_cppad = stats.iqr(times_cppad)
 print(f"Median XAD time:   {median_xad:.4f} s (IQR: {iqr_xad:.4f} s)")
-print(f"Median cppad time: {median_cppad:.4f} s (IQR: {iqr_cppad:.4f} s)")
+print(f"Median Cppad time: {median_cppad:.4f} s (IQR: {iqr_cppad:.4f} s)")
 if p_value < 0.05:
     print("Conclusion: The performance difference is statistically significant (p < 0.05)")
 else:
@@ -68,13 +69,13 @@ else:
 
 # visualization box plot
 plt.figure(figsize=(9, 6))
-plt.boxplot([times_xad, times_cppad], tick_labels=['XAD', 'cppad'], patch_artist=True,
+plt.boxplot([times_xad, times_cppad], tick_labels=['XAD', 'Cppad'], patch_artist=True,
             boxprops=dict(facecolor='#E0F7FA', color='#006064'),
             medianprops=dict(color='red', linewidth=2))
 plt.ylabel('Execution time (seconds)', fontsize=12)
 # setting the logarythmic scale
 plt.yscale('log')
-plt.title('Performance distribution (DET gradient task)', fontsize=14)
+plt.title('Performance distribution (ODE gradient task)', fontsize=14)
 plt.grid(True, axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()

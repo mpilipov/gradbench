@@ -1,0 +1,244 @@
+[0] start gmm (enzyme)
+  [1] def   gmm                                28.288 s ✓
+  [2] eval  gmm::objective  2_2_1000            1.090 s ~         0ms prepare,         0ms evaluate × 12786 ✓
+  [4] eval  gmm::jacobian   2_2_1000            1.055 s ~         0ms prepare,         0ms evaluate × 1960 ✓
+  [6] eval  gmm::objective  2_4_1000            1.051 s ~         0ms prepare,         0ms evaluate × 4707 ✓
+  [8] eval  gmm::jacobian   2_4_1000            1.030 s ~         0ms prepare,         1ms evaluate × 987 ✓
+ [10] eval  gmm::objective  4_2_1000            1.077 s ~         0ms prepare,         0ms evaluate × 8728 ✓
+ [12] eval  gmm::jacobian   4_2_1000            1.040 s ~         0ms prepare,         0ms evaluate × 1116 ✓
+ [14] eval  gmm::objective  2_6_1000            1.049 s ~         0ms prepare,         0ms evaluate × 2643 ✓
+ [16] eval  gmm::jacobian   2_6_1000            1.041 s ~         0ms prepare,         2ms evaluate × 433 ✓
+ [18] eval  gmm::objective  6_2_1000            1.096 s ~         0ms prepare,         0ms evaluate × 4635 ✓
+ [20] eval  gmm::jacobian   6_2_1000            1.067 s ~         0ms prepare,         2ms evaluate × 406 ✓
+ [22] eval  gmm::objective  2_8_1000            1.048 s ~         0ms prepare,         0ms evaluate × 4182 ✓
+ [24] eval  gmm::jacobian   2_8_1000            1.050 s ~         0ms prepare,         2ms evaluate × 370 ✓
+ [26] eval  gmm::objective  4_4_1000            1.065 s ~         0ms prepare,         0ms evaluate × 4737 ✓
+ [28] eval  gmm::jacobian   4_4_1000            1.042 s ~         0ms prepare,         1ms evaluate × 516 ✓
+ [30] eval  gmm::objective  8_2_1000            1.079 s ~         0ms prepare,         0ms evaluate × 5216 ✓
+ [32] eval  gmm::jacobian   8_2_1000            1.057 s ~         0ms prepare,         4ms evaluate × 232 ✓
+ [34] eval  gmm::objective  2_10_1000           1.037 s ~         0ms prepare,         0ms evaluate × 3360 ✓
+ [36] eval  gmm::jacobian   2_10_1000           1.024 s ~         0ms prepare,         2ms evaluate × 461 ✓
+ [38] eval  gmm::objective  10_2_1000           1.081 s ~         0ms prepare,         0ms evaluate × 4573 ✓
+ [40] eval  gmm::jacobian   10_2_1000           1.068 s ~         0ms prepare,         5ms evaluate × 194 ✓
+ [42] eval  gmm::objective  4_6_1000            1.074 s ~         0ms prepare,         0ms evaluate × 2506 ✓
+ [44] eval  gmm::jacobian   4_6_1000            1.057 s ~         0ms prepare,         2ms evaluate × 408 ✓
+ [46] eval  gmm::objective  6_4_1000            1.077 s ~         0ms prepare,         0ms evaluate × 2269 ✓
+ [48] eval  gmm::jacobian   6_4_1000            1.063 s ~         0ms prepare,         6ms evaluate × 155 ✓
+ [50] eval  gmm::objective  12_2_1000           1.105 s ~         0ms prepare,         0ms evaluate × 3457 ✓
+ [52] eval  gmm::jacobian   12_2_1000           1.081 s ~         0ms prepare,         5ms evaluate × 198 ✓
+ [54] eval  gmm::objective  2_15_1000           1.033 s ~         0ms prepare,         0ms evaluate × 2314 ✓
+ [56] eval  gmm::jacobian   2_15_1000           1.025 s ~         0ms prepare,         3ms evaluate × 258 ✓
+ [58] eval  gmm::objective  4_8_1000            1.050 s ~         0ms prepare,         0ms evaluate × 1914 ✓
+ [60] eval  gmm::jacobian   4_8_1000            1.047 s ~         0ms prepare,         3ms evaluate × 278 ✓
+ [62] eval  gmm::objective  8_4_1000            1.068 s ~         0ms prepare,         0ms evaluate × 2813 ✓
+ [64] eval  gmm::jacobian   8_4_1000            1.071 s ~         0ms prepare,         8ms evaluate × 113 ✓
+ [66] eval  gmm::objective  16_2_1000           1.100 s ~         0ms prepare,         0ms evaluate × 2898 ✓
+ [68] eval  gmm::jacobian   16_2_1000           1.111 s ~         0ms prepare,         7ms evaluate × 140 ✓
+ [70] eval  gmm::objective  6_6_1000            1.056 s ~         0ms prepare,         0ms evaluate × 2585 ✓
+ [72] eval  gmm::jacobian   6_6_1000            1.044 s ~         0ms prepare,         6ms evaluate × 165 ✓
+ [74] eval  gmm::objective  2_20_1000           1.034 s ~         0ms prepare,         0ms evaluate × 1573 ✓
+ [76] eval  gmm::jacobian   2_20_1000           1.038 s ~         0ms prepare,         7ms evaluate × 141 ✓
+ [78] eval  gmm::objective  4_10_1000           1.048 s ~         0ms prepare,         0ms evaluate × 2115 ✓
+ [80] eval  gmm::jacobian   4_10_1000           1.036 s ~         0ms prepare,         4ms evaluate × 248 ✓
+ [82] eval  gmm::objective  10_4_1000           1.074 s ~         0ms prepare,         0ms evaluate × 2354 ✓
+ [84] eval  gmm::jacobian   10_4_1000           1.068 s ~         0ms prepare,         9ms evaluate × 110 ✓
+ [86] eval  gmm::objective  20_2_1000           1.125 s ~         0ms prepare,         0ms evaluate × 2126 ✓
+ [88] eval  gmm::jacobian   20_2_1000           1.116 s ~         0ms prepare,         7ms evaluate × 130 ✓
+ [90] eval  gmm::objective  6_8_1000            1.059 s ~         0ms prepare,         0ms evaluate × 1968 ✓
+ [92] eval  gmm::jacobian   6_8_1000            1.058 s ~         0ms prepare,        10ms evaluate × 98 ✓
+ [94] eval  gmm::objective  8_6_1000            1.120 s ~         0ms prepare,         0ms evaluate × 1701 ✓
+ [96] eval  gmm::jacobian   8_6_1000            1.053 s ~         0ms prepare,        14ms evaluate × 68 ✓
+ [98] eval  gmm::objective  12_4_1000           1.080 s ~         0ms prepare,         0ms evaluate × 1943 ✓
+[100] eval  gmm::jacobian   12_4_1000           1.080 s ~         0ms prepare,        10ms evaluate × 94 ✓
+[102] eval  gmm::objective  24_2_1000           1.156 s ~         0ms prepare,         0ms evaluate × 1826 ✓
+[104] eval  gmm::jacobian   24_2_1000           1.148 s ~         0ms prepare,        11ms evaluate × 85 ✓
+[106] eval  gmm::objective  2_25_1000           1.027 s ~         0ms prepare,         0ms evaluate × 1426 ✓
+[108] eval  gmm::jacobian   2_25_1000           1.035 s ~         0ms prepare,         6ms evaluate × 145 ✓
+[110] eval  gmm::objective  28_2_1000           1.282 s ~         0ms prepare,         0ms evaluate × 1376 ✓
+[112] eval  gmm::jacobian   28_2_1000           1.237 s ~         0ms prepare,        11ms evaluate × 91 ✓
+[114] eval  gmm::objective  2_30_1000           1.026 s ~         0ms prepare,         0ms evaluate × 1293 ✓
+[116] eval  gmm::jacobian   2_30_1000           1.022 s ~         0ms prepare,         6ms evaluate × 167 ✓
+[118] eval  gmm::objective  4_15_1000           1.043 s ~         0ms prepare,         0ms evaluate × 1683 ✓
+[120] eval  gmm::jacobian   4_15_1000           1.029 s ~         0ms prepare,         5ms evaluate × 181 ✓
+[122] eval  gmm::objective  6_10_1000           1.053 s ~         0ms prepare,         0ms evaluate × 1425 ✓
+[124] eval  gmm::jacobian   6_10_1000           1.060 s ~         0ms prepare,        13ms evaluate × 73 ✓
+[126] eval  gmm::objective  10_6_1000           1.090 s ~         0ms prepare,         0ms evaluate × 1080 ✓
+[128] eval  gmm::jacobian   10_6_1000           1.078 s ~         0ms prepare,        14ms evaluate × 72 ✓
+[130] eval  gmm::objective  8_8_1000            1.057 s ~         0ms prepare,         0ms evaluate × 1702 ✓
+[132] eval  gmm::jacobian   8_8_1000            1.069 s ~         0ms prepare,        17ms evaluate × 59 ✓
+[134] eval  gmm::objective  16_4_1000           1.095 s ~         0ms prepare,         0ms evaluate × 1637 ✓
+[136] eval  gmm::jacobian   16_4_1000           1.152 s ~         0ms prepare,        13ms evaluate × 76 ✓
+[138] eval  gmm::objective  32_2_1000           1.163 s ~         0ms prepare,         0ms evaluate × 1423 ✓
+[140] eval  gmm::jacobian   32_2_1000           1.177 s ~         0ms prepare,        12ms evaluate × 78 ✓
+[142] eval  gmm::objective  12_6_1000           1.087 s ~         0ms prepare,         1ms evaluate × 939 ✓
+[144] eval  gmm::jacobian   12_6_1000           1.071 s ~         0ms prepare,        14ms evaluate × 71 ✓
+[146] eval  gmm::objective  2_40_1000           1.026 s ~         0ms prepare,         1ms evaluate × 675 ✓
+[148] eval  gmm::jacobian   2_40_1000           1.076 s ~         0ms prepare,        10ms evaluate × 95 ✓
+[150] eval  gmm::objective  4_20_1000           1.052 s ~         0ms prepare,         0ms evaluate × 1167 ✓
+[152] eval  gmm::jacobian   4_20_1000           1.038 s ~         0ms prepare,         7ms evaluate × 138 ✓
+[154] eval  gmm::objective  8_10_1000           1.052 s ~         0ms prepare,         0ms evaluate × 1322 ✓
+[156] eval  gmm::jacobian   8_10_1000           1.063 s ~         0ms prepare,        21ms evaluate × 48 ✓
+[158] eval  gmm::objective  10_8_1000           1.068 s ~         0ms prepare,         0ms evaluate × 1338 ✓
+[160] eval  gmm::jacobian   10_8_1000           1.099 s ~         0ms prepare,        24ms evaluate × 42 ✓
+[162] eval  gmm::objective  20_4_1000           1.117 s ~         0ms prepare,         0ms evaluate × 1250 ✓
+[164] eval  gmm::jacobian   20_4_1000           1.148 s ~         0ms prepare,        14ms evaluate × 68 ✓
+[166] eval  gmm::objective  6_15_1000           1.098 s ~         0ms prepare,         0ms evaluate × 1192 ✓
+[168] eval  gmm::jacobian   6_15_1000           1.050 s ~         0ms prepare,        13ms evaluate × 73 ✓
+[170] eval  gmm::objective  12_8_1000           1.080 s ~         0ms prepare,         0ms evaluate × 1087 ✓
+[172] eval  gmm::jacobian   12_8_1000           1.075 s ~         0ms prepare,        18ms evaluate × 53 ✓
+[174] eval  gmm::objective  16_6_1000           1.090 s ~         0ms prepare,         0ms evaluate × 1069 ✓
+[176] eval  gmm::jacobian   16_6_1000           1.117 s ~         0ms prepare,        30ms evaluate × 33 ✓
+[178] eval  gmm::objective  24_4_1000           1.229 s ~         0ms prepare,         1ms evaluate × 1000 ✓
+[180] eval  gmm::jacobian   24_4_1000           1.163 s ~         0ms prepare,        24ms evaluate × 42 ✓
+[182] eval  gmm::objective  2_50_1000           1.024 s ~         0ms prepare,         1ms evaluate × 807 ✓
+[184] eval  gmm::jacobian   2_50_1000           1.021 s ~         0ms prepare,        10ms evaluate × 100 ✓
+[186] eval  gmm::objective  4_25_1000           1.039 s ~         0ms prepare,         0ms evaluate × 1063 ✓
+[188] eval  gmm::jacobian   4_25_1000           1.031 s ~         0ms prepare,         9ms evaluate × 110 ✓
+[190] eval  gmm::objective  10_10_1000          1.065 s ~         0ms prepare,         0ms evaluate × 1141 ✓
+[192] eval  gmm::jacobian   10_10_1000          1.089 s ~         0ms prepare,        34ms evaluate × 30 ✓
+[194] eval  gmm::objective  28_4_1000           1.206 s ~         0ms prepare,         1ms evaluate × 780 ✓
+[196] eval  gmm::jacobian   28_4_1000           1.168 s ~         0ms prepare,        23ms evaluate × 43 ✓
+[198] eval  gmm::objective  4_30_1000           1.033 s ~         0ms prepare,         1ms evaluate × 816 ✓
+[200] eval  gmm::jacobian   4_30_1000           1.036 s ~         0ms prepare,        11ms evaluate × 88 ✓
+[202] eval  gmm::objective  6_20_1000           1.068 s ~         0ms prepare,         1ms evaluate × 704 ✓
+[204] eval  gmm::jacobian   6_20_1000           1.055 s ~         0ms prepare,        19ms evaluate × 52 ✓
+[206] eval  gmm::objective  8_15_1000           1.092 s ~         0ms prepare,         1ms evaluate × 908 ✓
+[208] eval  gmm::jacobian   8_15_1000           1.083 s ~         0ms prepare,        42ms evaluate × 24 ✓
+[210] eval  gmm::objective  12_10_1000          1.099 s ~         0ms prepare,         1ms evaluate × 831 ✓
+[212] eval  gmm::jacobian   12_10_1000          1.091 s ~         0ms prepare,        26ms evaluate × 39 ✓
+[214] eval  gmm::objective  20_6_1000           1.111 s ~         0ms prepare,         1ms evaluate × 834 ✓
+[216] eval  gmm::jacobian   20_6_1000           1.137 s ~         0ms prepare,        25ms evaluate × 39 ✓
+[218] eval  gmm::objective  16_8_1000           1.092 s ~         0ms prepare,         1ms evaluate × 814 ✓
+[220] eval  gmm::jacobian   16_8_1000           1.117 s ~         0ms prepare,        26ms evaluate × 39 ✓
+[222] eval  gmm::objective  32_4_1000           1.199 s ~         0ms prepare,         1ms evaluate × 647 ✓
+[224] eval  gmm::jacobian   32_4_1000           1.266 s ~         0ms prepare,        64ms evaluate × 16 ✓
+[226] eval  gmm::objective  24_6_1000           1.209 s ~         0ms prepare,         2ms evaluate × 476 ✓
+[228] eval  gmm::jacobian   24_6_1000           1.159 s ~         0ms prepare,        35ms evaluate × 29 ✓
+[230] eval  gmm::objective  6_25_1000           1.042 s ~         0ms prepare,         1ms evaluate × 716 ✓
+[232] eval  gmm::jacobian   6_25_1000           1.061 s ~         0ms prepare,        29ms evaluate × 34 ✓
+[234] eval  gmm::objective  10_15_1000          1.073 s ~         0ms prepare,         1ms evaluate × 634 ✓
+[236] eval  gmm::jacobian   10_15_1000          1.089 s ~         0ms prepare,        31ms evaluate × 32 ✓
+[238] eval  gmm::objective  4_40_1000           1.031 s ~         0ms prepare,         1ms evaluate × 672 ✓
+[240] eval  gmm::jacobian   4_40_1000           1.046 s ~         0ms prepare,        24ms evaluate × 41 ✓
+[242] eval  gmm::objective  8_20_1000           1.057 s ~         0ms prepare,         1ms evaluate × 670 ✓
+[244] eval  gmm::jacobian   8_20_1000           1.064 s ~         0ms prepare,        59ms evaluate × 17 ✓
+[246] eval  gmm::objective  16_10_1000          1.100 s ~         0ms prepare,         2ms evaluate × 497 ✓
+[248] eval  gmm::jacobian   16_10_1000          1.131 s ~         0ms prepare,        35ms evaluate × 29 ✓
+[250] eval  gmm::objective  20_8_1000           1.108 s ~         0ms prepare,         1ms evaluate × 626 ✓
+[252] eval  gmm::jacobian   20_8_1000           1.119 s ~         0ms prepare,        28ms evaluate × 35 ✓
+[254] eval  gmm::objective  28_6_1000           1.156 s ~         0ms prepare,         1ms evaluate × 552 ✓
+[256] eval  gmm::jacobian   28_6_1000           1.209 s ~         0ms prepare,        47ms evaluate × 21 ✓
+[258] eval  gmm::objective  6_30_1000           1.044 s ~         0ms prepare,         1ms evaluate × 614 ✓
+[260] eval  gmm::jacobian   6_30_1000           1.053 s ~         0ms prepare,        28ms evaluate × 36 ✓
+[262] eval  gmm::objective  12_15_1000          1.072 s ~         0ms prepare,         1ms evaluate × 595 ✓
+[264] eval  gmm::jacobian   12_15_1000          1.078 s ~         0ms prepare,        35ms evaluate × 28 ✓
+[266] eval  gmm::objective  24_8_1000           1.144 s ~         0ms prepare,         2ms evaluate × 476 ✓
+[268] eval  gmm::jacobian   24_8_1000           1.140 s ~         0ms prepare,        43ms evaluate × 23 ✓
+[270] eval  gmm::objective  32_6_1000           1.192 s ~         0ms prepare,         2ms evaluate × 454 ✓
+[272] eval  gmm::jacobian   32_6_1000           1.301 s ~         0ms prepare,        41ms evaluate × 24 ✓
+[274] eval  gmm::objective  4_50_1000           1.046 s ~         0ms prepare,         1ms evaluate × 548 ✓
+[276] eval  gmm::jacobian   4_50_1000           1.040 s ~         0ms prepare,        18ms evaluate × 54 ✓
+[278] eval  gmm::objective  8_25_1000           1.051 s ~         0ms prepare,         1ms evaluate × 558 ✓
+[280] eval  gmm::jacobian   8_25_1000           1.053 s ~         0ms prepare,        47ms evaluate × 21 ✓
+[282] eval  gmm::objective  10_20_1000          1.062 s ~         0ms prepare,         1ms evaluate × 572 ✓
+[284] eval  gmm::jacobian   10_20_1000          1.067 s ~         0ms prepare,        45ms evaluate × 22 ✓
+[286] eval  gmm::objective  20_10_1000          1.116 s ~         0ms prepare,         1ms evaluate × 513 ✓
+[288] eval  gmm::jacobian   20_10_1000          1.178 s ~         0ms prepare,        46ms evaluate × 22 ✓
+[290] eval  gmm::objective  28_8_1000           1.169 s ~         0ms prepare,         2ms evaluate × 390 ✓
+[292] eval  gmm::jacobian   28_8_1000           1.160 s ~         0ms prepare,        45ms evaluate × 22 ✓
+[294] eval  gmm::objective  6_40_1000           1.042 s ~         0ms prepare,         2ms evaluate × 447 ✓
+[296] eval  gmm::jacobian   6_40_1000           1.046 s ~         0ms prepare,        35ms evaluate × 28 ✓
+[298] eval  gmm::objective  8_30_1000           1.053 s ~         0ms prepare,         2ms evaluate × 462 ✓
+[300] eval  gmm::jacobian   8_30_1000           1.097 s ~         0ms prepare,        79ms evaluate × 13 ✓
+[302] eval  gmm::objective  12_20_1000          1.118 s ~         0ms prepare,         3ms evaluate × 294 ✓
+[304] eval  gmm::jacobian   12_20_1000          1.218 s ~         0ms prepare,        61ms evaluate × 17 ✓
+[306] eval  gmm::objective  16_15_1000          1.100 s ~         0ms prepare,         2ms evaluate × 444 ✓
+[308] eval  gmm::jacobian   16_15_1000          1.140 s ~         0ms prepare,        51ms evaluate × 20 ✓
+[310] eval  gmm::objective  24_10_1000          1.139 s ~         0ms prepare,         2ms evaluate × 405 ✓
+[312] eval  gmm::jacobian   24_10_1000          1.185 s ~         0ms prepare,        57ms evaluate × 18 ✓
+[314] eval  gmm::objective  10_25_1000          1.062 s ~         0ms prepare,         2ms evaluate × 461 ✓
+[316] eval  gmm::jacobian   10_25_1000          1.080 s ~         0ms prepare,        56ms evaluate × 18 ✓
+[318] eval  gmm::objective  32_8_1000           1.283 s ~         0ms prepare,         4ms evaluate × 222 ✓
+[320] eval  gmm::jacobian   32_8_1000           1.231 s ~         0ms prepare,        56ms evaluate × 18 ✓
+[322] eval  gmm::objective  28_10_1000          1.236 s ~         0ms prepare,         4ms evaluate × 235 ✓
+[324] eval  gmm::jacobian   28_10_1000          1.273 s ~         0ms prepare,        59ms evaluate × 17 ✓
+[326] eval  gmm::objective  6_50_1000           1.045 s ~         0ms prepare,         2ms evaluate × 375 ✓
+[328] eval  gmm::jacobian   6_50_1000           1.083 s ~         0ms prepare,        47ms evaluate × 22 ✓
+[330] eval  gmm::objective  10_30_1000          1.064 s ~         0ms prepare,         2ms evaluate × 378 ✓
+[332] eval  gmm::jacobian   10_30_1000          1.172 s ~         0ms prepare,       121ms evaluate × 9 ✓
+[334] eval  gmm::objective  12_25_1000          1.116 s ~         0ms prepare,         3ms evaluate × 259 ✓
+[336] eval  gmm::jacobian   12_25_1000          1.173 s ~         0ms prepare,       118ms evaluate × 9 ✓
+[338] eval  gmm::objective  20_15_1000          1.146 s ~         0ms prepare,         4ms evaluate × 222 ✓
+[340] eval  gmm::jacobian   20_15_1000          1.179 s ~         0ms prepare,        63ms evaluate × 16 ✓
+[342] eval  gmm::objective  8_40_1000           1.060 s ~         0ms prepare,         3ms evaluate × 325 ✓
+[344] eval  gmm::jacobian   8_40_1000           1.097 s ~         0ms prepare,        93ms evaluate × 11 ✓
+[346] eval  gmm::objective  16_20_1000          1.117 s ~         0ms prepare,         3ms evaluate × 301 ✓
+[348] eval  gmm::jacobian   16_20_1000          1.170 s ~         0ms prepare,       102ms evaluate × 10 ✓
+[350] eval  gmm::objective  32_10_1000          1.210 s ~         0ms prepare,         3ms evaluate × 267 ✓
+[352] eval  gmm::jacobian   32_10_1000          1.289 s ~         0ms prepare,        82ms evaluate × 13 ✓
+[354] eval  gmm::objective  12_30_1000          1.081 s ~         0ms prepare,         3ms evaluate × 266 ✓
+[356] eval  gmm::jacobian   12_30_1000          1.163 s ~         0ms prepare,        82ms evaluate × 13 ✓
+[358] eval  gmm::objective  24_15_1000          1.159 s ~         0ms prepare,         4ms evaluate × 240 ✓
+[360] eval  gmm::jacobian   24_15_1000          1.250 s ~         0ms prepare,        90ms evaluate × 12 ✓
+[362] eval  gmm::objective  8_50_1000           1.095 s ~         0ms prepare,         6ms evaluate × 166 ✓
+[364] eval  gmm::jacobian   8_50_1000           1.112 s ~         0ms prepare,       116ms evaluate × 9 ✓
+[366] eval  gmm::objective  10_40_1000          1.067 s ~         0ms prepare,         3ms evaluate × 280 ✓
+[368] eval  gmm::jacobian   10_40_1000          1.108 s ~         0ms prepare,       103ms evaluate × 10 ✓
+[370] eval  gmm::objective  16_25_1000          1.186 s ~         0ms prepare,         3ms evaluate × 272 ✓
+[372] eval  gmm::jacobian   16_25_1000          1.115 s ~         0ms prepare,        91ms evaluate × 11 ✓
+[374] eval  gmm::objective  20_20_1000          1.153 s ~         0ms prepare,         4ms evaluate × 205 ✓
+[376] eval  gmm::jacobian   20_20_1000          1.310 s ~         0ms prepare,       103ms evaluate × 11 ✓
+[378] eval  gmm::objective  28_15_1000          1.201 s ~         0ms prepare,         4ms evaluate × 204 ✓
+[380] eval  gmm::jacobian   28_15_1000          1.289 s ~         0ms prepare,        96ms evaluate × 11 ✓
+[382] eval  gmm::objective  12_40_1000          1.140 s ~         0ms prepare,         7ms evaluate × 138 ✓
+[384] eval  gmm::jacobian   12_40_1000          1.308 s ~         0ms prepare,       224ms evaluate × 5 ✓
+[386] eval  gmm::objective  16_30_1000          1.214 s ~         0ms prepare,         7ms evaluate × 128 ✓
+[388] eval  gmm::jacobian   16_30_1000          1.296 s ~         0ms prepare,       136ms evaluate × 8 ✓
+[390] eval  gmm::objective  24_20_1000          1.204 s ~         0ms prepare,         5ms evaluate × 171 ✓
+[392] eval  gmm::jacobian   24_20_1000          1.242 s ~         0ms prepare,       134ms evaluate × 8 ✓
+[394] eval  gmm::objective  32_15_1000          1.236 s ~         0ms prepare,         5ms evaluate × 173 ✓
+[396] eval  gmm::jacobian   32_15_1000          1.256 s ~         0ms prepare,       113ms evaluate × 9 ✓
+[398] eval  gmm::objective  10_50_1000          1.076 s ~         0ms prepare,         4ms evaluate × 231 ✓
+[400] eval  gmm::jacobian   10_50_1000          1.152 s ~         0ms prepare,       132ms evaluate × 8 ✓
+[402] eval  gmm::objective  20_25_1000          1.164 s ~         0ms prepare,         7ms evaluate × 130 ✓
+[404] eval  gmm::jacobian   20_25_1000          1.285 s ~         0ms prepare,       123ms evaluate × 9 ✓
+[406] eval  gmm::objective  28_20_1000          1.300 s ~         0ms prepare,         9ms evaluate × 110 ✓
+[408] eval  gmm::jacobian   28_20_1000          1.421 s ~         0ms prepare,       179ms evaluate × 6 ✓
+[410] eval  gmm::objective  12_50_1000          1.106 s ~         0ms prepare,         5ms evaluate × 171 ✓
+[412] eval  gmm::jacobian   12_50_1000          1.119 s ~         0ms prepare,       145ms evaluate × 7 ✓
+[414] eval  gmm::objective  20_30_1000          1.137 s ~         0ms prepare,         6ms evaluate × 156 ✓
+[416] eval  gmm::jacobian   20_30_1000          1.322 s ~         0ms prepare,       130ms evaluate × 8 ✓
+[418] eval  gmm::objective  24_25_1000          1.152 s ~         0ms prepare,         9ms evaluate × 103 ✓
+[420] eval  gmm::jacobian   24_25_1000          1.252 s ~         0ms prepare,       255ms evaluate × 4 ✓
+[422] eval  gmm::objective  16_40_1000          1.122 s ~         0ms prepare,         6ms evaluate × 163 ✓
+[424] eval  gmm::jacobian   16_40_1000          1.207 s ~         0ms prepare,       154ms evaluate × 7 ✓
+[426] eval  gmm::objective  32_20_1000          1.209 s ~         0ms prepare,         7ms evaluate × 133 ✓
+[428] eval  gmm::jacobian   32_20_1000          1.379 s ~         0ms prepare,       224ms evaluate × 5 ✓
+[430] eval  gmm::objective  28_25_1000          1.207 s ~         0ms prepare,         8ms evaluate × 116 ✓
+[432] eval  gmm::jacobian   28_25_1000          1.242 s ~         0ms prepare,       167ms evaluate × 6 ✓
+[434] eval  gmm::objective  24_30_1000          1.162 s ~         0ms prepare,         7ms evaluate × 132 ✓
+[436] eval  gmm::jacobian   24_30_1000          1.281 s ~         0ms prepare,       182ms evaluate × 6 ✓
+[438] eval  gmm::objective  16_50_1000          1.118 s ~         0ms prepare,         7ms evaluate × 129 ✓
+[440] eval  gmm::jacobian   16_50_1000          1.283 s ~         0ms prepare,       188ms evaluate × 6 ✓
+[442] eval  gmm::objective  20_40_1000          1.233 s ~         0ms prepare,         8ms evaluate × 113 ✓
+[444] eval  gmm::jacobian   20_40_1000          1.286 s ~         0ms prepare,       159ms evaluate × 7 ✓
+[446] eval  gmm::objective  32_25_1000          1.235 s ~         0ms prepare,         9ms evaluate × 110 ✓
+[448] eval  gmm::jacobian   32_25_1000          1.482 s ~         0ms prepare,       237ms evaluate × 5 ✓
+[450] eval  gmm::objective  28_30_1000          1.342 s ~         0ms prepare,        12ms evaluate × 79 ✓
+[452] eval  gmm::jacobian   28_30_1000          1.341 s ~         0ms prepare,       263ms evaluate × 4 ✓
+[454] eval  gmm::objective  24_40_1000          1.248 s ~         0ms prepare,        10ms evaluate × 92 ✓
+[456] eval  gmm::jacobian   24_40_1000          1.246 s ~         0ms prepare,       260ms evaluate × 4 ✓
+[458] eval  gmm::objective  32_30_1000          1.244 s ~         0ms prepare,        10ms evaluate × 95 ✓
+[460] eval  gmm::jacobian   32_30_1000          1.352 s ~         0ms prepare,       268ms evaluate × 4 ✓
+[462] eval  gmm::objective  20_50_1000          1.152 s ~         0ms prepare,        10ms evaluate × 98 ✓
+[464] eval  gmm::jacobian   20_50_1000          1.341 s ~         0ms prepare,       282ms evaluate × 4 ✓
+[466] eval  gmm::objective  28_40_1000          1.244 s ~         0ms prepare,        12ms evaluate × 79 ✓
+[468] eval  gmm::jacobian   28_40_1000          1.425 s ~         0ms prepare,       288ms evaluate × 4 ✓
+[470] eval  gmm::objective  24_50_1000          1.228 s ~         0ms prepare,        20ms evaluate × 49 ✓
+[472] eval  gmm::jacobian   24_50_1000          1.274 s ~         0ms prepare,       336ms evaluate × 3 ✓
+[474] eval  gmm::objective  32_40_1000          1.295 s ~         0ms prepare,        16ms evaluate × 63 ✓
+[476] eval  gmm::jacobian   32_40_1000          1.592 s ~         0ms prepare,       572ms evaluate × 2 ✓
+[478] eval  gmm::objective  28_50_1000          1.312 s ~         0ms prepare,        18ms evaluate × 55 ✓
+[480] eval  gmm::jacobian   28_50_1000          1.461 s ~         0ms prepare,       369ms evaluate × 3 ✓
+[482] eval  gmm::objective  32_50_1000          1.544 s ~         0ms prepare,        38ms evaluate × 26 ✓
+[484] eval  gmm::jacobian   32_50_1000          1.802 s ~         0ms prepare,       592ms evaluate × 2 ✓

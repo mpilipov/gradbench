@@ -1,0 +1,222 @@
+[0] start llsq (cppad)
+  [1] def   llsq                               33.693 s ✓
+  [2] eval  llsq::primal    n=16,m=16          27.497 s ~         0ms prepare,         0ms evaluate × 2825242 ✓
+  [4] eval  llsq::gradient  n=16,m=16           1.407 s ~         0ms prepare,         0ms evaluate × 8791 ✓
+  [6] eval  llsq::primal    n=16,m=32          14.732 s ~         0ms prepare,         0ms evaluate × 1326906 ✓
+  [8] eval  llsq::gradient  n=16,m=32           1.055 s ~         0ms prepare,         0ms evaluate × 4488 ✓
+ [10] eval  llsq::primal    n=32,m=16          16.210 s ~         0ms prepare,         0ms evaluate × 1392154 ✓
+ [12] eval  llsq::gradient  n=32,m=16           1.064 s ~         0ms prepare,         0ms evaluate × 2447 ✓
+ [14] eval  llsq::primal    n=16,m=48           5.225 s ~         0ms prepare,         0ms evaluate × 188570 ✓
+ [16] eval  llsq::gradient  n=16,m=48           1.075 s ~         0ms prepare,         1ms evaluate × 962 ✓
+ [18] eval  llsq::primal    n=16,m=64           4.105 s ~         0ms prepare,         0ms evaluate × 221653 ✓
+ [20] eval  llsq::gradient  n=16,m=64           1.031 s ~         0ms prepare,         0ms evaluate × 1774 ✓
+ [22] eval  llsq::primal    n=32,m=32           8.505 s ~         0ms prepare,         0ms evaluate × 596205 ✓
+ [24] eval  llsq::gradient  n=32,m=32           1.030 s ~         0ms prepare,         0ms evaluate × 3073 ✓
+ [26] eval  llsq::primal    n=64,m=16           7.428 s ~         0ms prepare,         0ms evaluate × 826512 ✓
+ [28] eval  llsq::gradient  n=64,m=16           1.029 s ~         0ms prepare,         0ms evaluate × 1158 ✓
+ [30] eval  llsq::primal    n=16,m=80           3.594 s ~         0ms prepare,         0ms evaluate × 278417 ✓
+ [32] eval  llsq::gradient  n=16,m=80           1.024 s ~         0ms prepare,         0ms evaluate × 2207 ✓
+ [34] eval  llsq::primal    n=16,m=96           3.846 s ~         0ms prepare,         0ms evaluate × 379446 ✓
+ [36] eval  llsq::gradient  n=16,m=96           1.025 s ~         0ms prepare,         0ms evaluate × 1459 ✓
+ [38] eval  llsq::primal    n=32,m=48           4.459 s ~         0ms prepare,         0ms evaluate × 514781 ✓
+ [40] eval  llsq::gradient  n=32,m=48           1.057 s ~         0ms prepare,         0ms evaluate × 1564 ✓
+ [42] eval  llsq::primal    n=16,m=112          2.702 s ~         0ms prepare,         0ms evaluate × 177255 ✓
+ [44] eval  llsq::gradient  n=16,m=112          1.020 s ~         0ms prepare,         0ms evaluate × 1622 ✓
+ [46] eval  llsq::primal    n=16,m=128          3.203 s ~         0ms prepare,         0ms evaluate × 367922 ✓
+ [48] eval  llsq::gradient  n=16,m=128          1.016 s ~         0ms prepare,         0ms evaluate × 1673 ✓
+ [50] eval  llsq::primal    n=32,m=64           3.188 s ~         0ms prepare,         0ms evaluate × 416010 ✓
+ [52] eval  llsq::gradient  n=32,m=64           1.072 s ~         0ms prepare,         1ms evaluate × 973 ✓
+ [54] eval  llsq::primal    n=64,m=32           3.166 s ~         0ms prepare,         0ms evaluate × 308571 ✓
+ [56] eval  llsq::gradient  n=64,m=32           1.016 s ~         0ms prepare,         0ms evaluate × 1454 ✓
+ [58] eval  llsq::primal    n=128,m=16          3.981 s ~         0ms prepare,         0ms evaluate × 446676 ✓
+ [60] eval  llsq::gradient  n=128,m=16          1.022 s ~         0ms prepare,         0ms evaluate × 1615 ✓
+ [62] eval  llsq::primal    n=16,m=144          3.630 s ~         0ms prepare,         0ms evaluate × 310948 ✓
+ [64] eval  llsq::gradient  n=16,m=144          1.021 s ~         0ms prepare,         0ms evaluate × 1477 ✓
+ [66] eval  llsq::primal    n=16,m=160          2.564 s ~         0ms prepare,         0ms evaluate × 298397 ✓
+ [68] eval  llsq::gradient  n=16,m=160          1.077 s ~         0ms prepare,         0ms evaluate × 1006 ✓
+ [70] eval  llsq::primal    n=32,m=80           2.380 s ~         0ms prepare,         0ms evaluate × 256337 ✓
+ [72] eval  llsq::gradient  n=32,m=80           1.025 s ~         0ms prepare,         0ms evaluate × 1024 ✓
+ [74] eval  llsq::primal    n=32,m=96           2.699 s ~         0ms prepare,         0ms evaluate × 184700 ✓
+ [76] eval  llsq::gradient  n=32,m=96           1.014 s ~         0ms prepare,         1ms evaluate × 997 ✓
+ [78] eval  llsq::primal    n=64,m=48           2.406 s ~         0ms prepare,         0ms evaluate × 290380 ✓
+ [80] eval  llsq::gradient  n=64,m=48           1.013 s ~         0ms prepare,         0ms evaluate × 1164 ✓
+ [82] eval  llsq::primal    n=32,m=112          2.658 s ~         0ms prepare,         0ms evaluate × 185192 ✓
+ [84] eval  llsq::gradient  n=32,m=112          1.015 s ~         0ms prepare,         1ms evaluate × 842 ✓
+ [86] eval  llsq::primal    n=32,m=128          2.004 s ~         0ms prepare,         0ms evaluate × 190177 ✓
+ [88] eval  llsq::gradient  n=32,m=128          1.044 s ~         0ms prepare,         1ms evaluate × 599 ✓
+ [90] eval  llsq::primal    n=64,m=64           2.186 s ~         0ms prepare,         0ms evaluate × 160966 ✓
+ [92] eval  llsq::gradient  n=64,m=64           1.017 s ~         0ms prepare,         1ms evaluate × 706 ✓
+ [94] eval  llsq::primal    n=128,m=32          2.325 s ~         0ms prepare,         0ms evaluate × 256624 ✓
+ [96] eval  llsq::gradient  n=128,m=32          1.068 s ~         0ms prepare,         1ms evaluate × 783 ✓
+ [98] eval  llsq::primal    n=256,m=16          4.162 s ~         0ms prepare,         0ms evaluate × 228181 ✓
+[100] eval  llsq::gradient  n=256,m=16          1.065 s ~         0ms prepare,         1ms evaluate × 598 ✓
+[102] eval  llsq::primal    n=32,m=144          1.831 s ~         0ms prepare,         0ms evaluate × 156705 ✓
+[104] eval  llsq::gradient  n=32,m=144          1.018 s ~         0ms prepare,         3ms evaluate × 329 ✓
+[106] eval  llsq::primal    n=32,m=160          1.653 s ~         0ms prepare,         0ms evaluate × 113009 ✓
+[108] eval  llsq::gradient  n=32,m=160          1.014 s ~         0ms prepare,         1ms evaluate × 544 ✓
+[110] eval  llsq::primal    n=64,m=80           1.986 s ~         0ms prepare,         0ms evaluate × 159908 ✓
+[112] eval  llsq::gradient  n=64,m=80           1.015 s ~         0ms prepare,         3ms evaluate × 314 ✓
+[114] eval  llsq::primal    n=64,m=96           1.614 s ~         0ms prepare,         0ms evaluate × 68738 ✓
+[116] eval  llsq::gradient  n=64,m=96           1.023 s ~         0ms prepare,         2ms evaluate × 414 ✓
+[118] eval  llsq::primal    n=128,m=48          1.770 s ~         0ms prepare,         0ms evaluate × 117224 ✓
+[120] eval  llsq::gradient  n=128,m=48          1.018 s ~         0ms prepare,         5ms evaluate × 193 ✓
+[122] eval  llsq::primal    n=64,m=112          1.543 s ~         0ms prepare,         0ms evaluate × 49567 ✓
+[124] eval  llsq::gradient  n=64,m=112          1.028 s ~         0ms prepare,         3ms evaluate × 264 ✓
+[126] eval  llsq::primal    n=64,m=128          1.538 s ~         0ms prepare,         0ms evaluate × 30192 ✓
+[128] eval  llsq::gradient  n=64,m=128          1.018 s ~         0ms prepare,         5ms evaluate × 185 ✓
+[130] eval  llsq::primal    n=128,m=64          1.441 s ~         0ms prepare,         0ms evaluate × 64862 ✓
+[132] eval  llsq::gradient  n=128,m=64          1.011 s ~         0ms prepare,         3ms evaluate × 288 ✓
+[134] eval  llsq::primal    n=256,m=32          1.718 s ~         0ms prepare,         0ms evaluate × 111436 ✓
+[136] eval  llsq::gradient  n=256,m=32          1.011 s ~         0ms prepare,         3ms evaluate × 296 ✓
+[138] eval  llsq::primal    n=512,m=16          1.582 s ~         0ms prepare,         0ms evaluate × 72591 ✓
+[140] eval  llsq::gradient  n=512,m=16          1.010 s ~         0ms prepare,         3ms evaluate × 268 ✓
+[142] eval  llsq::primal    n=64,m=144          1.432 s ~         0ms prepare,         0ms evaluate × 73555 ✓
+[144] eval  llsq::gradient  n=64,m=144          1.020 s ~         0ms prepare,         3ms evaluate × 295 ✓
+[146] eval  llsq::primal    n=64,m=160          1.472 s ~         0ms prepare,         0ms evaluate × 63829 ✓
+[148] eval  llsq::gradient  n=64,m=160          1.086 s ~         0ms prepare,         3ms evaluate × 277 ✓
+[150] eval  llsq::primal    n=128,m=80          2.058 s ~         0ms prepare,         0ms evaluate × 41164 ✓
+[152] eval  llsq::gradient  n=128,m=80          1.017 s ~         0ms prepare,         6ms evaluate × 158 ✓
+[154] eval  llsq::primal    n=128,m=96          1.278 s ~         0ms prepare,         0ms evaluate × 28807 ✓
+[156] eval  llsq::gradient  n=128,m=96          1.015 s ~         0ms prepare,         6ms evaluate × 161 ✓
+[158] eval  llsq::primal    n=256,m=48          1.343 s ~         0ms prepare,         0ms evaluate × 61144 ✓
+[160] eval  llsq::gradient  n=256,m=48          1.015 s ~         0ms prepare,         4ms evaluate × 210 ✓
+[162] eval  llsq::primal    n=128,m=112         1.319 s ~         0ms prepare,         0ms evaluate × 52599 ✓
+[164] eval  llsq::gradient  n=128,m=112         1.017 s ~         0ms prepare,         6ms evaluate × 156 ✓
+[166] eval  llsq::primal    n=128,m=128         1.362 s ~         0ms prepare,         0ms evaluate × 40016 ✓
+[168] eval  llsq::gradient  n=128,m=128         1.011 s ~         0ms prepare,         6ms evaluate × 165 ✓
+[170] eval  llsq::primal    n=256,m=64          1.206 s ~         0ms prepare,         0ms evaluate × 35123 ✓
+[172] eval  llsq::gradient  n=256,m=64          1.013 s ~         0ms prepare,         6ms evaluate × 162 ✓
+[174] eval  llsq::primal    n=512,m=32          1.520 s ~         0ms prepare,         0ms evaluate × 41157 ✓
+[176] eval  llsq::gradient  n=512,m=32          1.019 s ~         0ms prepare,        17ms evaluate × 57 ✓
+[178] eval  llsq::primal    n=1024,m=16         1.290 s ~         0ms prepare,         0ms evaluate × 21286 ✓
+[180] eval  llsq::gradient  n=1024,m=16         1.014 s ~         0ms prepare,         7ms evaluate × 133 ✓
+[182] eval  llsq::primal    n=128,m=144         1.202 s ~         0ms prepare,         0ms evaluate × 34226 ✓
+[184] eval  llsq::gradient  n=128,m=144         1.018 s ~         0ms prepare,         8ms evaluate × 119 ✓
+[186] eval  llsq::primal    n=128,m=160         1.217 s ~         0ms prepare,         0ms evaluate × 30244 ✓
+[188] eval  llsq::gradient  n=128,m=160         1.113 s ~         0ms prepare,         6ms evaluate × 144 ✓
+[190] eval  llsq::primal    n=256,m=80          1.291 s ~         0ms prepare,         0ms evaluate × 31418 ✓
+[192] eval  llsq::gradient  n=256,m=80          1.060 s ~         0ms prepare,         7ms evaluate × 129 ✓
+[194] eval  llsq::primal    n=256,m=96          1.172 s ~         0ms prepare,         0ms evaluate × 21473 ✓
+[196] eval  llsq::gradient  n=256,m=96          1.016 s ~         0ms prepare,         8ms evaluate × 118 ✓
+[198] eval  llsq::primal    n=512,m=48          1.194 s ~         0ms prepare,         0ms evaluate × 38801 ✓
+[200] eval  llsq::gradient  n=512,m=48          1.017 s ~         0ms prepare,        10ms evaluate × 99 ✓
+[202] eval  llsq::primal    n=256,m=112         1.188 s ~         0ms prepare,         0ms evaluate × 14998 ✓
+[204] eval  llsq::gradient  n=256,m=112         1.031 s ~         0ms prepare,        23ms evaluate × 44 ✓
+[206] eval  llsq::primal    n=256,m=128         1.126 s ~         0ms prepare,         0ms evaluate × 14804 ✓
+[208] eval  llsq::gradient  n=256,m=128         1.015 s ~         0ms prepare,        11ms evaluate × 84 ✓
+[210] eval  llsq::primal    n=512,m=64          1.137 s ~         0ms prepare,         0ms evaluate × 18918 ✓
+[212] eval  llsq::gradient  n=512,m=64          1.009 s ~         0ms prepare,        14ms evaluate × 68 ✓
+[214] eval  llsq::primal    n=1024,m=32         1.148 s ~         0ms prepare,         0ms evaluate × 26997 ✓
+[216] eval  llsq::gradient  n=1024,m=32         1.021 s ~         0ms prepare,        12ms evaluate × 78 ✓
+[218] eval  llsq::primal    n=2048,m=16         1.147 s ~         0ms prepare,         0ms evaluate × 18546 ✓
+[220] eval  llsq::gradient  n=2048,m=16         1.013 s ~         0ms prepare,        15ms evaluate × 63 ✓
+[222] eval  llsq::primal    n=256,m=144         1.095 s ~         0ms prepare,         0ms evaluate × 15964 ✓
+[224] eval  llsq::gradient  n=256,m=144         1.022 s ~         0ms prepare,        12ms evaluate × 82 ✓
+[226] eval  llsq::primal    n=256,m=160         1.187 s ~         0ms prepare,         0ms evaluate × 17954 ✓
+[228] eval  llsq::gradient  n=256,m=160         1.110 s ~         0ms prepare,        19ms evaluate × 54 ✓
+[230] eval  llsq::primal    n=512,m=80          1.092 s ~         0ms prepare,         0ms evaluate × 19504 ✓
+[232] eval  llsq::gradient  n=512,m=80          1.017 s ~         0ms prepare,        12ms evaluate × 83 ✓
+[234] eval  llsq::primal    n=512,m=96          1.173 s ~         0ms prepare,         0ms evaluate × 17530 ✓
+[236] eval  llsq::gradient  n=512,m=96          1.070 s ~         0ms prepare,        15ms evaluate × 66 ✓
+[238] eval  llsq::primal    n=1024,m=48         1.111 s ~         0ms prepare,         0ms evaluate × 21074 ✓
+[240] eval  llsq::gradient  n=1024,m=48         1.018 s ~         0ms prepare,        15ms evaluate × 67 ✓
+[242] eval  llsq::primal    n=512,m=112         1.070 s ~         0ms prepare,         0ms evaluate × 14151 ✓
+[244] eval  llsq::gradient  n=512,m=112         1.090 s ~         0ms prepare,        22ms evaluate × 46 ✓
+[246] eval  llsq::primal    n=512,m=128         1.062 s ~         0ms prepare,         0ms evaluate × 9574 ✓
+[248] eval  llsq::gradient  n=512,m=128         1.021 s ~         0ms prepare,        21ms evaluate × 48 ✓
+[250] eval  llsq::primal    n=1024,m=64         1.066 s ~         0ms prepare,         0ms evaluate × 12828 ✓
+[252] eval  llsq::gradient  n=1024,m=64         1.018 s ~         0ms prepare,        20ms evaluate × 49 ✓
+[254] eval  llsq::primal    n=2048,m=32         1.084 s ~         0ms prepare,         0ms evaluate × 16810 ✓
+[256] eval  llsq::gradient  n=2048,m=32         1.015 s ~         0ms prepare,        21ms evaluate × 47 ✓
+[258] eval  llsq::primal    n=4096,m=16         1.078 s ~         0ms prepare,         0ms evaluate × 16388 ✓
+[260] eval  llsq::gradient  n=4096,m=16         1.074 s ~         0ms prepare,        21ms evaluate × 47 ✓
+[262] eval  llsq::primal    n=512,m=144         1.056 s ~         0ms prepare,         0ms evaluate × 8615 ✓
+[264] eval  llsq::gradient  n=512,m=144         1.026 s ~         0ms prepare,        26ms evaluate × 39 ✓
+[266] eval  llsq::primal    n=512,m=160         1.047 s ~         0ms prepare,         0ms evaluate × 8414 ✓
+[268] eval  llsq::gradient  n=512,m=160         1.027 s ~         0ms prepare,        26ms evaluate × 39 ✓
+[270] eval  llsq::primal    n=1024,m=80         1.056 s ~         0ms prepare,         0ms evaluate × 8347 ✓
+[272] eval  llsq::gradient  n=1024,m=80         1.017 s ~         0ms prepare,        37ms evaluate × 27 ✓
+[274] eval  llsq::primal    n=1024,m=96         1.118 s ~         0ms prepare,         0ms evaluate × 6473 ✓
+[276] eval  llsq::gradient  n=1024,m=96         1.045 s ~         0ms prepare,        35ms evaluate × 29 ✓
+[278] eval  llsq::primal    n=2048,m=48         1.075 s ~         0ms prepare,         0ms evaluate × 10076 ✓
+[280] eval  llsq::gradient  n=2048,m=48         1.010 s ~         0ms prepare,        47ms evaluate × 21 ✓
+[282] eval  llsq::primal    n=1024,m=112        1.062 s ~         0ms prepare,         0ms evaluate × 4381 ✓
+[284] eval  llsq::gradient  n=1024,m=112        1.036 s ~         0ms prepare,        38ms evaluate × 27 ✓
+[286] eval  llsq::primal    n=1024,m=128        1.034 s ~         0ms prepare,         0ms evaluate × 5292 ✓
+[288] eval  llsq::gradient  n=1024,m=128        1.067 s ~         0ms prepare,        45ms evaluate × 22 ✓
+[290] eval  llsq::primal    n=2048,m=64         1.050 s ~         0ms prepare,         0ms evaluate × 6807 ✓
+[292] eval  llsq::gradient  n=2048,m=64         1.048 s ~         0ms prepare,        43ms evaluate × 24 ✓
+[294] eval  llsq::primal    n=4096,m=32         1.070 s ~         0ms prepare,         0ms evaluate × 8295 ✓
+[296] eval  llsq::gradient  n=4096,m=32         1.007 s ~         0ms prepare,        41ms evaluate × 24 ✓
+[298] eval  llsq::primal    n=8192,m=16         1.107 s ~         0ms prepare,         0ms evaluate × 8154 ✓
+[300] eval  llsq::gradient  n=8192,m=16         1.016 s ~         0ms prepare,        45ms evaluate × 22 ✓
+[302] eval  llsq::primal    n=1024,m=144        1.047 s ~         0ms prepare,         0ms evaluate × 5421 ✓
+[304] eval  llsq::gradient  n=1024,m=144        1.029 s ~         0ms prepare,        48ms evaluate × 21 ✓
+[306] eval  llsq::primal    n=1024,m=160        1.035 s ~         0ms prepare,         0ms evaluate × 4502 ✓
+[308] eval  llsq::gradient  n=1024,m=160        1.022 s ~         0ms prepare,        56ms evaluate × 18 ✓
+[310] eval  llsq::primal    n=2048,m=80         1.031 s ~         0ms prepare,         0ms evaluate × 4136 ✓
+[312] eval  llsq::gradient  n=2048,m=80         1.029 s ~         0ms prepare,        56ms evaluate × 18 ✓
+[314] eval  llsq::primal    n=2048,m=96         1.024 s ~         0ms prepare,         0ms evaluate × 3780 ✓
+[316] eval  llsq::gradient  n=2048,m=96         1.052 s ~         0ms prepare,        65ms evaluate × 16 ✓
+[318] eval  llsq::primal    n=4096,m=48         1.028 s ~         0ms prepare,         0ms evaluate × 3673 ✓
+[320] eval  llsq::gradient  n=4096,m=48         1.036 s ~         0ms prepare,        68ms evaluate × 15 ✓
+[322] eval  llsq::primal    n=2048,m=112        1.023 s ~         0ms prepare,         0ms evaluate × 3354 ✓
+[324] eval  llsq::gradient  n=2048,m=112        1.065 s ~         0ms prepare,        70ms evaluate × 15 ✓
+[326] eval  llsq::primal    n=2048,m=128        1.021 s ~         0ms prepare,         0ms evaluate × 3074 ✓
+[328] eval  llsq::gradient  n=2048,m=128        1.051 s ~         0ms prepare,        80ms evaluate × 13 ✓
+[330] eval  llsq::primal    n=4096,m=64         1.026 s ~         0ms prepare,         0ms evaluate × 2821 ✓
+[332] eval  llsq::gradient  n=4096,m=64         1.106 s ~         0ms prepare,       109ms evaluate × 10 ✓
+[334] eval  llsq::primal    n=8192,m=32         1.024 s ~         0ms prepare,         0ms evaluate × 3678 ✓
+[336] eval  llsq::gradient  n=8192,m=32         1.032 s ~         0ms prepare,       102ms evaluate × 10 ✓
+[338] eval  llsq::primal    n=16385,m=16        1.089 s ~         0ms prepare,         0ms evaluate × 3812 ✓
+[340] eval  llsq::gradient  n=16385,m=16        1.050 s ~         0ms prepare,        87ms evaluate × 12 ✓
+[342] eval  llsq::primal    n=2048,m=144        1.019 s ~         0ms prepare,         0ms evaluate × 2139 ✓
+[344] eval  llsq::gradient  n=2048,m=144        1.101 s ~         0ms prepare,       104ms evaluate × 10 ✓
+[346] eval  llsq::primal    n=2048,m=160        1.021 s ~         0ms prepare,         0ms evaluate × 2214 ✓
+[348] eval  llsq::gradient  n=2048,m=160        1.092 s ~         0ms prepare,       107ms evaluate × 10 ✓
+[350] eval  llsq::primal    n=4096,m=80         1.022 s ~         0ms prepare,         0ms evaluate × 2669 ✓
+[352] eval  llsq::gradient  n=4096,m=80         1.070 s ~         0ms prepare,       118ms evaluate × 9 ✓
+[354] eval  llsq::primal    n=4096,m=96         1.023 s ~         0ms prepare,         0ms evaluate × 1551 ✓
+[356] eval  llsq::gradient  n=4096,m=96         1.201 s ~         0ms prepare,       198ms evaluate × 6 ✓
+[358] eval  llsq::primal    n=8192,m=48         1.033 s ~         0ms prepare,         0ms evaluate × 1827 ✓
+[360] eval  llsq::gradient  n=8192,m=48         1.071 s ~         0ms prepare,       132ms evaluate × 8 ✓
+[362] eval  llsq::primal    n=4096,m=112        1.072 s ~         0ms prepare,         0ms evaluate × 1703 ✓
+[364] eval  llsq::gradient  n=4096,m=112        1.131 s ~         0ms prepare,       140ms evaluate × 8 ✓
+[366] eval  llsq::primal    n=4096,m=128        1.070 s ~         0ms prepare,         0ms evaluate × 1359 ✓
+[368] eval  llsq::gradient  n=4096,m=128        1.038 s ~         0ms prepare,       171ms evaluate × 6 ✓
+[370] eval  llsq::primal    n=8192,m=64         1.016 s ~         0ms prepare,         0ms evaluate × 1702 ✓
+[372] eval  llsq::gradient  n=8192,m=64         1.243 s ~         0ms prepare,       176ms evaluate × 7 ✓
+[374] eval  llsq::primal    n=16385,m=32        1.018 s ~         0ms prepare,         0ms evaluate × 1774 ✓
+[376] eval  llsq::gradient  n=16385,m=32        1.126 s ~         0ms prepare,       159ms evaluate × 7 ✓
+[378] eval  llsq::primal    n=4096,m=144        1.013 s ~         0ms prepare,         0ms evaluate × 1205 ✓
+[380] eval  llsq::gradient  n=4096,m=144        1.110 s ~         0ms prepare,       183ms evaluate × 6 ✓
+[382] eval  llsq::primal    n=4096,m=160        1.013 s ~         0ms prepare,         0ms evaluate × 1050 ✓
+[384] eval  llsq::gradient  n=4096,m=160        1.099 s ~         0ms prepare,       181ms evaluate × 6 ✓
+[386] eval  llsq::primal    n=8192,m=80         1.012 s ~         0ms prepare,         0ms evaluate × 1154 ✓
+[388] eval  llsq::gradient  n=8192,m=80         1.178 s ~         0ms prepare,       195ms evaluate × 6 ✓
+[390] eval  llsq::primal    n=8192,m=96         1.015 s ~         0ms prepare,         1ms evaluate × 731 ✓
+[392] eval  llsq::gradient  n=8192,m=96         1.027 s ~         0ms prepare,       338ms evaluate × 3 ✓
+[394] eval  llsq::primal    n=16385,m=48        1.016 s ~         0ms prepare,         0ms evaluate × 1120 ✓
+[396] eval  llsq::gradient  n=16385,m=48        1.104 s ~         0ms prepare,       274ms evaluate × 4 ✓
+[398] eval  llsq::primal    n=8192,m=112        1.011 s ~         0ms prepare,         1ms evaluate × 863 ✓
+[400] eval  llsq::gradient  n=8192,m=112        1.058 s ~         0ms prepare,       262ms evaluate × 4 ✓
+[402] eval  llsq::primal    n=8192,m=128        1.021 s ~         0ms prepare,         1ms evaluate × 691 ✓
+[404] eval  llsq::gradient  n=8192,m=128        1.259 s ~         0ms prepare,       310ms evaluate × 4 ✓
+[406] eval  llsq::primal    n=16385,m=64        1.065 s ~         0ms prepare,         1ms evaluate × 930 ✓
+[408] eval  llsq::gradient  n=16385,m=64        1.189 s ~         0ms prepare,       392ms evaluate × 3 ✓
+[410] eval  llsq::primal    n=8192,m=144        1.017 s ~         0ms prepare,         2ms evaluate × 489 ✓
+[412] eval  llsq::gradient  n=8192,m=144        1.199 s ~         0ms prepare,       397ms evaluate × 3 ✓
+[414] eval  llsq::primal    n=8192,m=160        1.014 s ~         0ms prepare,         1ms evaluate × 511 ✓
+[416] eval  llsq::gradient  n=8192,m=160        1.164 s ~         0ms prepare,       385ms evaluate × 3 ✓
+[418] eval  llsq::primal    n=16385,m=80        1.012 s ~         0ms prepare,         1ms evaluate × 691 ✓
+[420] eval  llsq::gradient  n=16385,m=80        1.303 s ~         0ms prepare,       428ms evaluate × 3 ✓
+[422] eval  llsq::primal    n=16385,m=96        1.019 s ~         0ms prepare,         2ms evaluate × 485 ✓
+[424] eval  llsq::gradient  n=16385,m=96        1.249 s ~         0ms prepare,       621ms evaluate × 2 ✓
+[426] eval  llsq::primal    n=16385,m=112       1.011 s ~         0ms prepare,         3ms evaluate × 333 ✓
+[428] eval  llsq::gradient  n=16385,m=112       1.209 s ~         0ms prepare,       600ms evaluate × 2 ✓
+[430] eval  llsq::primal    n=16385,m=128       1.009 s ~         0ms prepare,         2ms evaluate × 355 ✓
+[432] eval  llsq::gradient  n=16385,m=128       1.247 s ~         0ms prepare,       620ms evaluate × 2 ✓
+[434] eval  llsq::primal    n=16385,m=144       1.008 s ~         0ms prepare,         3ms evaluate × 305 ✓
+[436] eval  llsq::gradient  n=16385,m=144       1.460 s ~         0ms prepare,       724ms evaluate × 2 ✓
+[438] eval  llsq::primal    n=16385,m=160       1.064 s ~         0ms prepare,         3ms evaluate × 270 ✓
+[440] eval  llsq::gradient  n=16385,m=160       2.073 s ~         0ms prepare,     1.008 s evaluate × 2 ✓

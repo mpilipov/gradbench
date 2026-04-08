@@ -13,18 +13,27 @@ public:
 
   void compute(JacOutput& output) {
     // types initialization
-    typedef xad::adj<double>  mode;
-    typedef mode::tape_type   tape_type;
-    typedef mode::active_type AD;
+    typedef xad::adj<double>  mode;       // mode: adj or fwd
+    typedef mode::tape_type   tape_type;  // creating the tape
+    typedef mode::active_type AD;  // an alias for "mode::active_type" type
 
     tape_type tape;  // tape initialization
 
     // active variables initialization
-    std::vector<AD> alpha_ad(_input.k);
-    std::vector<AD> mu_ad(_input.d * _input.k);
-    std::vector<AD> q_ad(_input.k * _input.d);
+    std::vector<AD> alpha_ad(
+        _input.k);  // weights of clusters (equals number of clusters=K)
+    std::vector<AD> mu_ad(_input.d *
+                          _input.k);  // centers of clusters (equals K*number of
+                                      // coordinates of each cluster=K*D)
+    std::vector<AD> q_ad(
+        _input.k *
+        _input.d);  // diagonal elements of covariation matrices (equals K*D)
+                    // responsible for the span of the cluster along the axes
     // size l: k * (d * (d - 1) / 2)
-    std::vector<AD> l_ad(_input.l.size());
+    std::vector<AD> l_ad(
+        _input.l
+            .size());  // non-diagonal elements of covariation matrices (equals
+                       // K*D) responsible for the tilt of the cluster
 
     // copying data from input to the active variables
     for (size_t i = 0; i < alpha_ad.size(); ++i)
@@ -36,6 +45,7 @@ public:
     for (size_t i = 0; i < l_ad.size(); ++i)
       l_ad[i] = _input.l[i];
 
+    // variables for which derivatives are taken
     for (auto& v : alpha_ad)  // for every v in the vector alpha_ad
       tape.registerInput(v);  // registering input on the tape
     for (auto& v : mu_ad)
@@ -49,25 +59,28 @@ public:
     tape.newRecording();
 
     AD error;  // target function we want to minimize
-    // gmm::objective receives data pointers
-    gmm::objective(
-        _input.d, _input.k, _input.n, alpha_ad.data(), mu_ad.data(),
-        q_ad.data(), l_ad.data(), _input.x.data(), _input.wishart,
-        &error);  // the computation result will be recorded into error
+
+    // gmm::objective receives data pointers (cpp/../gmm.hpp)
+    // forward pass of the model
+    gmm::objective(_input.d, _input.k, _input.n, alpha_ad.data(), mu_ad.data(),
+                   q_ad.data(), l_ad.data(), _input.x.data(), _input.wishart,
+                   &error);
+    // the computation result will be recorded into error
 
     // Registering output on the tape and setting seed f'(...)=1
     tape.registerOutput(error);
     xad::derivative(error) = 1.0;
 
     // adjoint mode computation - calculating derivatives by every of 4
-    // parameters (alpha, mu, q, l)
+    // parameters (alpha, mu, q, l) using chain rule
     tape.computeAdjoints();
 
     // preparation of the output variables
     output.d = _input.d;
     output.k = _input.k;
     output.n = _input.n;
-    output.alpha.resize(_input.k);
+    output.alpha.resize(
+        _input.k);  // should be the same as sizes of input parameters
     output.mu.resize(_input.d * _input.k);
     output.q.resize(_input.k * _input.d);
     output.l.resize(l_ad.size());

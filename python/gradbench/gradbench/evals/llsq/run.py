@@ -25,9 +25,13 @@ def main():
         "-n",
         nargs="+",
         type=int,
-        default=[16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8196, 16392],
+        default=[16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16385],
     )
-    parser.add_argument("-m", nargs="+", type=int, default=[128])
+    parser.add_argument("-m",
+        nargs="+",
+        type=int,
+        default=[16, 32, 48, 64, 80, 96, 112, 128, 144, 160],
+    )
     parser.add_argument("--min-runs", type=int, default=1)
     parser.add_argument("--min-seconds", type=float, default=1)
     args = parser.parse_args()

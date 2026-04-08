@@ -130,14 +130,14 @@ def main():
         "-d",
         nargs="+",
         type=int,
-        default=[2, 10, 20, 32, 64],  # misses 128
+        default=[2, 4, 6, 8, 10, 12, 16, 20, 24, 28, 32],#[2, 10, 20, 32, 64],  # misses 128
         help="number of dimensions",
     )
     parser.add_argument(
         "-k",
         nargs="+",
         type=int,
-        default=[5, 10, 25, 50, 100],  # misses 200
+        default=[2, 4, 6, 8, 10, 15, 20, 25, 30, 40, 50],#[5, 10, 25, 50, 100],  # misses 200
         help="number of mixture components",
     )
     parser.add_argument(
