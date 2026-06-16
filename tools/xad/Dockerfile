@@ -17,10 +17,13 @@ WORKDIR /opt
 RUN git clone https://github.com/auto-differentiation/xad.git
 
 WORKDIR /opt/xad
+
+RUN sed -i 's/Tape.cpp/Tape.cpp XAD\/JITCompilerTLS.cpp XAD\/JITGraphInterpreter.cpp/g' src/CMakeLists.txt
 # build and install /opt/xad-install
-RUN cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/opt/xad-install -DXAD_ENABLE_TESTS=OFF -DXAD_ENABLE_SAMPLES=OFF
+RUN cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/opt/xad-install -DXAD_ENABLE_TESTS=OFF -DXAD_ENABLE_SAMPLES=OFF -DXAD_ENABLE_JIT=ON
 RUN cmake --build build --target install
 
+RUN cp -r /opt/xad/src/XAD/* /opt/xad-install/include/XAD/
 
 # cd /gradbench
 WORKDIR /gradbench

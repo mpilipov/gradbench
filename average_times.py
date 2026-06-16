@@ -3,12 +3,12 @@ import os
 from collections import defaultdict
 
 # 1. Paths to the gradbench results
-file1 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_run1.txt"
-file2 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_run2.txt"
-file3 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_run3.txt"
+file1 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results3\gmm_xad_run1.txt"
+file2 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results3\gmm_xad_run2.txt"
+file3 = r"C:\Users\Michael\Downloads\gradbench\gradbench_results3\gmm_xad_run3.txt"
 
 # 2. Name of the final result data
-output_file = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\ode_enzyme_averaged.txt"
+output_file = r"C:\Users\Michael\Downloads\gradbench\gradbench_results3\gmm_xad_averaged.txt"
 
 def parse_time(val_str, unit):
     # converting time to ms
@@ -31,9 +31,9 @@ def extract_times(filepath, data_dict):
     # pattern takes the total time of the test (3, 4 groups) and number of computations (5 group)
     #pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?gradient\s+([\w_]+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
     #for gmm task:
-    #pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?jacobian\s+(\S+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
+    pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?jacobian\s+(\S+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
     #for llsq task
-    pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?gradient\s+(\S+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
+    #pattern = r'\[(\d+)\]\s+eval\s+(?:\w+::)?gradient\s+(\S+)\s+([\d:.]+)\s*(ms|s)?\s+~.*?(?:×\s*(\d+)\s*)?(✓|✗)'
     for line in log_text.strip().split('\n'):
         match = re.search(pattern, line)
         if match:
@@ -59,7 +59,7 @@ times_data = defaultdict(lambda: {'id': '', 'times': []})
 # gathering data from all 3 runs
 extract_times(file1, times_data)
 extract_times(file2, times_data)
-extract_times(file3, times_data)
+#extract_times(file3, times_data)
 
 # writing the averaged result
 with open(output_file, 'w', encoding='utf-8') as f:
@@ -75,8 +75,8 @@ with open(output_file, 'w', encoding='utf-8') as f:
         if len(times) > 0:
             avg_time = sum(times) / len(times)
             # creating a string to be red by stats.py ! necessary to replace when the task is changed
-            f.write(f"[{test_id}] eval ode::gradient {param} , {avg_time:.9f} s evaluate ✓\n")
+            f.write(f"[{test_id}] eval gmm::jacobian {param} , {avg_time:.9f} s evaluate ✓\n")
             tests_written += 1
 
-print(f"The process is completed. Were averaged {tests_written} tests (only gradient).")
+print(f"The process is completed. Were averaged {tests_written} tests (only jacobian).")
 print(f"The result is saved in {output_file}")

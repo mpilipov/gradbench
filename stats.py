@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import os
 
-xad_gmm_log = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\xad_det_averaged.txt"
-cppad_gmm_log = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\cppad_det_averaged.txt"
+xad_gmm_log = r"C:\Users\Michael\Downloads\gradbench\gradbench_results3\gmm_xad_averaged.txt"
+cppad_gmm_log = r"C:\Users\Michael\Downloads\gradbench\gradbench_results2\gmm_adept_averaged.txt"
 
 def parse_log(filepath):
     results = {}
@@ -61,7 +61,7 @@ median_cppad = np.median(times_cppad)
 iqr_xad = stats.iqr(times_xad)
 iqr_cppad = stats.iqr(times_cppad)
 print(f"Median XAD time:   {median_xad:.4f} s (IQR: {iqr_xad:.4f} s)")
-print(f"Median Cppad time: {median_cppad:.4f} s (IQR: {iqr_cppad:.4f} s)")
+print(f"Median Adept time: {median_cppad:.4f} s (IQR: {iqr_cppad:.4f} s)")
 if p_value < 0.05:
     print("Conclusion: The performance difference is statistically significant (p < 0.05)")
 else:
@@ -69,13 +69,13 @@ else:
 
 # visualization box plot
 plt.figure(figsize=(9, 6))
-plt.boxplot([times_xad, times_cppad], tick_labels=['XAD', 'Cppad'], patch_artist=True,
+plt.boxplot([times_xad, times_cppad], tick_labels=['XAD', 'Adept'], patch_artist=True,
             boxprops=dict(facecolor='#E0F7FA', color='#006064'),
             medianprops=dict(color='red', linewidth=2))
 plt.ylabel('Execution time (seconds)', fontsize=12)
 # setting the logarythmic scale
 plt.yscale('log')
-plt.title('Performance distribution (ODE gradient task)', fontsize=14)
+plt.title('Performance distribution (GMM jacobian task)', fontsize=14)
 plt.grid(True, axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()

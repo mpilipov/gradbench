@@ -1,6 +1,11 @@
 #include "gradbench/evals/det.hpp"
 #include "gradbench/main.hpp"
 #include <XAD/XAD.hpp>
+
+// for JIT management
+// #include <XAD/JITCompilerTLS.cpp>
+// #include <XAD/JITGraphInterpreter.cpp>
+
 #include <vector>
 
 // Gradient class: computes the gradient of the matrix determinant
@@ -11,55 +16,61 @@
 // and restoration are invisible to the tape -- only arithmetic on AD
 // values is recorded.
 class DetXAD : public Function<det::Input, det::GradientOutput> {
-  // 1. Define XAD types for reverse (adjoint) mode
-  // using mode      = xad::adj<double>;
-  using AD        = xad::AReal<double, 1>;
-  using tape_type = xad::Tape<double>;
+  // 1. Define XAD types for JIT mode
+  using AD = xad::AReal<double, 1>;
 
-  // 2. Initialise the tape
-  tape_type tape;
-
-  std::vector<AD> A_ad;
+  // 2. State variables that persist across runs
+  xad::JITCompiler<double, 1> jit;
+  AD                          result_det;
+  std::vector<AD>             A_ad;
+  double                      out_val;
 
 public:
-  DetXAD(det::Input& input) : Function(input), A_ad(input.A.size()) {}
-
-  void compute(det::GradientOutput& output) {
-
+  DetXAD(det::Input& input) : Function(input), A_ad(input.A.size()) {
     // ell:       matrix dimension (ell x ell)
     // n_elements: total number of matrix entries (ell * ell)
     size_t ell        = _input.ell;
     size_t n_elements = _input.A.size();
 
-    // 3. Initialise active input variables -- one per matrix element --
-    // for (size_t i = 0; i < n_elements; ++i) {
-
-    // }
     // 3.  and register each with the tape
     for (size_t i = 0; i < n_elements; ++i) {
       A_ad[i] = _input.A[i];
-      tape.registerInput(A_ad[i]);
+      jit.registerInput(A_ad[i]);
     }
-    // 4. Start recording operations onto the tape
-    tape.newRecording();
 
-    // 5. Evaluate the determinant with active types.
-    //    det::primal<AD> calls det_of_minor<AD> recursively; XAD records
-    //    all multiplications and additions performed during the expansion.
-    AD result_det;
+    // forward propagation - XAD writes every operation in det::primal
     det::primal<AD>(ell, A_ad.data(), &result_det);
 
-    // 6. Register the scalar output and seed its adjoint
-    tape.registerOutput(result_det);
-    xad::derivative(result_det) = 1.0;  // d(det)/d(det) = 1
+    // registering of scalar output
+    jit.registerOutput(result_det);
 
-    // 7. Run the reverse pass to propagate adjoints back to the inputs
-    tape.computeAdjoints();
+    // jit-compilation - reversing recursion to one linear function
+    jit.compile();
+  }
+  void compute(det::GradientOutput& output) {
+
+    size_t n_elements = _input.A.size();
+    // update input values by new gradbench data
+    for (size_t i = 0; i < n_elements; ++i) {
+      A_ad[i] = _input.A[i];
+    }
+
+    // Cleaning derivatives from the previous run
+    jit.clearDerivatives();
+
+    // fast pass by already compilated code
+    jit.forward(&out_val);
+
+    // setting the seed
+    jit.setDerivative(result_det.getSlot(), 1.0);
+
+    // back propagation
+    jit.computeAdjoints();
 
     // 8. Collect d(det) / d(A[i]) for every matrix element
     output.resize(n_elements);
     for (size_t i = 0; i < n_elements; ++i) {
-      output[i] = xad::derivative(A_ad[i]);
+      output[i] = jit.getDerivative(A_ad[i].getSlot());
     }
   }
 };

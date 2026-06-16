@@ -8,32 +8,35 @@ using namespace gmm;
 using namespace xad;
 using namespace std;
 class GmmXAD : public Function<Input, JacOutput> {
+  // types initialization
+  // typedef xad::adj<double>  mode;       // mode: adj or fwd
+  using AD        = xad::AReal<double>;
+  using tape_type = xad::Tape<double>;  // an alias for "mode::active_type" type
+
+  // tape and active variables
+  tape_type       tape;
+  std::vector<AD> alpha_ad;
+  std::vector<AD> mu_ad;
+  std::vector<AD> q_ad;
+  std::vector<AD> l_ad;
+
 public:
-  GmmXAD(Input& input) : Function(input) {}
+  GmmXAD(Input& input)
+      : Function(input),
+        // allocating memory
+        alpha_ad(input.k),  // weights of clusters (equals number of clusters=K)
+        mu_ad(input.d * input.k),  // centers of clusters (equals K*number of
+                                   // coordinates of each cluster=K*D)
+        q_ad(
+            input.k *
+            input.d),  // diagonal elements of covariation matrices (equals K*D)
+                       // responsible for the span of the cluster along the axes
+        l_ad(input.l.size())  // non-diagonal elements of covariation matrices
+                              // (equals K*D) responsible for the tilt of the
+                              // cluster
+  {}
 
   void compute(JacOutput& output) {
-    // types initialization
-    typedef xad::adj<double>  mode;       // mode: adj or fwd
-    typedef mode::tape_type   tape_type;  // creating the tape
-    typedef mode::active_type AD;  // an alias for "mode::active_type" type
-
-    tape_type tape;  // tape initialization
-
-    // active variables initialization
-    std::vector<AD> alpha_ad(
-        _input.k);  // weights of clusters (equals number of clusters=K)
-    std::vector<AD> mu_ad(_input.d *
-                          _input.k);  // centers of clusters (equals K*number of
-                                      // coordinates of each cluster=K*D)
-    std::vector<AD> q_ad(
-        _input.k *
-        _input.d);  // diagonal elements of covariation matrices (equals K*D)
-                    // responsible for the span of the cluster along the axes
-    // size l: k * (d * (d - 1) / 2)
-    std::vector<AD> l_ad(
-        _input.l
-            .size());  // non-diagonal elements of covariation matrices (equals
-                       // K*D) responsible for the tilt of the cluster
 
     // copying data from input to the active variables
     for (size_t i = 0; i < alpha_ad.size(); ++i)
@@ -45,9 +48,9 @@ public:
     for (size_t i = 0; i < l_ad.size(); ++i)
       l_ad[i] = _input.l[i];
 
-    // variables for which derivatives are taken
-    for (auto& v : alpha_ad)  // for every v in the vector alpha_ad
-      tape.registerInput(v);  // registering input on the tape
+    // registering variables for taking derivatives
+    for (auto& v : alpha_ad)
+      tape.registerInput(v);
     for (auto& v : mu_ad)
       tape.registerInput(v);
     for (auto& v : q_ad)
@@ -55,7 +58,8 @@ public:
     for (auto& v : l_ad)
       tape.registerInput(v);
 
-    // start of the recording
+    // cleaning the tape for a new Gradbench run (includes clearDerivatives()
+    // functional)
     tape.newRecording();
 
     AD error;  // target function we want to minimize
